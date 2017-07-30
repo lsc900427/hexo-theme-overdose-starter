@@ -20,7 +20,7 @@ default:
 ##   'spoqa-han-sans-jp'
 ## ]
 ## If you don't want font, you shouldn't specify the font.
-font:
+font: noto-sans-kr
 
 # Dynamic menu with scrolling
 dynamic_menu: false
@@ -38,7 +38,7 @@ related_posts: 3 # default enabled as 3
 # Profile
 profile:
   image: /images/avatar.jpg
-  gravatar:
+  gravatar: 인문학과 개발
   link:
   description:
   social:
@@ -47,7 +47,7 @@ profile:
     linkedin:
     instagram:
     twitter:
-    rss: /atom.xml
+#    rss: /atom.xml
 
 # Footer widgets
 ## Don't use over than 3 widgets.

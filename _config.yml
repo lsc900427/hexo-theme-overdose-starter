@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 인문학적 개발
 subtitle:
 description:
-author: John Doe
-language:
+author: SangCheol Lee
+language: ko
 timezone:
 
 # URL
@@ -94,5 +94,5 @@ feed:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/GITHUB_ID/GITHUB_ID.github.io
+  repo: https://github.com/lsc900427/lsc900427.github.io
   branch: master
