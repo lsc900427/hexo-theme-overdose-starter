@@ -61,7 +61,7 @@ profile:
 ## If you don't want widget, you shouldn't specify widgets.
 widgets:
   - recent-posts
-  - archives
+  - tags
   - categories
 
 # Other Services
