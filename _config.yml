@@ -94,5 +94,5 @@ feed:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/lsc900427/lsc900427햣 .github.io
+  repo: https://github.com/lsc900427/lsc900427.github.io
   branch: master
