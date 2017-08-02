@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://GITHUB_ID.github.io</loc>
-        <changefreq>daily</changefreq>
-        <priority>1</priority>
-    </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/2017/08/03/Es6/</loc>
+        <loc>https://GITHUB_ID.github.io/tags/%EC%A7%B9/</loc>
         <lastmod>2017-08-02T19:44:03.000Z</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
+        <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/2017/07/31/hello-world/</loc>
-        <lastmod>2017-07-30T17:09:07.000Z</lastmod>
+        <loc>https://GITHUB_ID.github.io/tags/%EC%A7%B9%EC%A7%B9/</loc>
+        <lastmod>2017-08-02T19:44:03.000Z</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
+        <priority>0.2</priority>
     </url>
 
 </urlset>
