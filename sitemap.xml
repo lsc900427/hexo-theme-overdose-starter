@@ -7,6 +7,11 @@
     </sitemap>
 
     <sitemap>
+        <loc>https://GITHUB_ID.github.io/page-sitemap.xml</loc>
+        <lastmod>2017-08-02T20:22:27.000Z</lastmod>
+    </sitemap>
+
+    <sitemap>
         <loc>https://GITHUB_ID.github.io/tag-sitemap.xml</loc>
         <lastmod>2017-08-02T19:44:03.000Z</lastmod>
     </sitemap>
