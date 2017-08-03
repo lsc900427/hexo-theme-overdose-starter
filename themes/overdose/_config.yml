@@ -76,9 +76,3 @@ fb_admin:
 twitter:
 google_plus:
 
-
-# Search
-search:
-    insight: true
-    swiftype:
-    baidu: true

@@ -97,13 +97,5 @@ deploy:
   repo: https://github.com/lsc900427/lsc900427.github.io
   branch: master
 
-# Search
-search:
-    insight: true
-    swiftype:
-    baidu: true
-
-
-
 # Please put your shortname of disqus here.
 disqus_shortname: lsctech
