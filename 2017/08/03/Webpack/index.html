@@ -1,28 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>인문학적 개발</title>
-  
-  <link href="/feed.xml" rel="self"/>
-  
-  <link href="https://GITHUB_ID.github.io/"/>
-  <updated>2017-08-03T12:39:39.000Z</updated>
-  <id>https://GITHUB_ID.github.io/</id>
-  
-  <author>
-    <name>SangCheol Lee</name>
-    
-  </author>
-  
-  <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>Webpack</title>
-    <link href="https://GITHUB_ID.github.io/2017/08/03/Webpack/"/>
-    <id>https://GITHUB_ID.github.io/2017/08/03/Webpack/</id>
-    <published>2017-08-02T19:42:49.000Z</published>
-    <updated>2017-08-03T12:39:39.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://webpack.js.org/" rel="external nofollow noopener noreferrer" target="_blank">Webpack</a>는 자바스크립트를 위한 모듈 번들러입니다.<br><img src="../../../../images/webpack.png" alt="html"><br>많이 쓰이지만 처음 접하면 굉장히 복잡한 도구 중 하나라고 생각합니다.<br>이런 복잡함을 해소하기 위해서 보통 스타터킷으로 많이 시작하곤 하죠.<br>그렇기에 설정들이 무엇을 의미하는지 알기가 쉽지 않습니다.<br>우리는 간단하게 webpack의 설정들이 무엇인지 알아보는 시간을 갖도록 하겠습니다.!!</p>
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Webpack | 인문학적 개발</title><link rel="stylesheet" href="/libs/noto-sans-kr/styles.css"><link rel="stylesheet" href="/css/font.css"><link rel="stylesheet" href="/libs/normalize.min.css"><link rel="stylesheet" href="/libs/font-awesome-4.6.3/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/css/highlights/dracula.css"><link rel="canonical" href="https://GITHUB_ID.github.io/2017/08/03/Webpack/">
+<meta name="description" content="Webpack는 자바스크립트를 위한 모듈 번들러입니다.많이 쓰이지만 처음 접하면 굉장히 복잡한 도구 중 하나라고 생각합니다.이런 복잡함을 해소하기 위해서 보통 스타터킷으로 많이 시작하곤 하죠.그렇기에 설정들이 무엇을 의미하는지 알기가 쉽지 않습니다.우리는 간단하게 webpack의 설정들이 무엇인지 알아보는 시간을 갖도록 하겠습니다.!! Webpack 설정1">
+<meta name="keywords" content="webpack,v2,bundler">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Webpack">
+<meta property="og:url" content="https://GITHUB_ID.github.io/2017/08/03/Webpack/index.html">
+<meta property="og:site_name" content="인문학적 개발">
+<meta property="og:description" content="Webpack는 자바스크립트를 위한 모듈 번들러입니다.많이 쓰이지만 처음 접하면 굉장히 복잡한 도구 중 하나라고 생각합니다.이런 복잡함을 해소하기 위해서 보통 스타터킷으로 많이 시작하곤 하죠.그렇기에 설정들이 무엇을 의미하는지 알기가 쉽지 않습니다.우리는 간단하게 webpack의 설정들이 무엇인지 알아보는 시간을 갖도록 하겠습니다.!! Webpack 설정1">
+<meta property="og:locale" content="ko">
+<meta property="og:image" content="https://github_id.github.io/images/webpack.png">
+<meta property="og:updated_time" content="2017-08-03T12:39:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Webpack">
+<meta name="twitter:description" content="Webpack는 자바스크립트를 위한 모듈 번들러입니다.많이 쓰이지만 처음 접하면 굉장히 복잡한 도구 중 하나라고 생각합니다.이런 복잡함을 해소하기 위해서 보통 스타터킷으로 많이 시작하곤 하죠.그렇기에 설정들이 무엇을 의미하는지 알기가 쉽지 않습니다.우리는 간단하게 webpack의 설정들이 무엇인지 알아보는 시간을 갖도록 하겠습니다.!! Webpack 설정1">
+<meta name="twitter:image" content="https://github_id.github.io/images/webpack.png"><meta property="article:author" content="SangCheol Lee"><link rel="icon" href="/images/webpack.png"><script>(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-103952799-1', 'auto');
+ga('send', 'pageview');</script></head><body itemscope="" itemtype="https://schema.org/WebPage"><nav id="menu" class="menu"><div class="menu-inner"><div class="menu__left-area"><div class="menu__item"><a href="/" title="Home" rel="home" class="menu__item__link menu__item__link--brand"><img src="/images/webpack.png" alt="인문학적 개발" class="menu__item__link--brand__image"><span class="menu__item__link--brand__label">인문학적 개발</span></a></div></div><div class="menu__right-area"><div class="menu__item"><a href="/" class="menu__item__link">Home</a></div><div class="menu__item"><a href="/about" class="menu__item__link">About</a></div><div class="menu__item"><a href="/archives" class="menu__item__link">Archives</a></div></div></div></nav><div class="page-background"></div><div class="content-outer"><div itemscope="" itemtype="https://schema.org/Blog" class="content-inner"><article id="article" itemscope="" itemtype="https://schema.org/BlogPosting" class="article"><h1 itemprop="headline" class="article__title">Webpack</h1><div class="article__meta"><time datetime="2017-08-02T19:42:49.000Z" itemprop="datePublished" class="article__meta__time">2017-08-03 04:42:49</time></div><hr><div class="article__contents"><p><a href="https://webpack.js.org/" rel="external nofollow noopener noreferrer" target="_blank">Webpack</a>는 자바스크립트를 위한 모듈 번들러입니다.<br><img src="../../../../images/webpack.png" alt="html"><br>많이 쓰이지만 처음 접하면 굉장히 복잡한 도구 중 하나라고 생각합니다.<br>이런 복잡함을 해소하기 위해서 보통 스타터킷으로 많이 시작하곤 하죠.<br>그렇기에 설정들이 무엇을 의미하는지 알기가 쉽지 않습니다.<br>우리는 간단하게 webpack의 설정들이 무엇인지 알아보는 시간을 갖도록 하겠습니다.!!</p>
 <h2 id="Webpack-설정"><a href="#Webpack-설정" class="headerlink" title="Webpack 설정"></a>Webpack 설정</h2><h3 id="1단계"><a href="#1단계" class="headerlink" title="1단계"></a>1단계</h3><p><code>webpack.config.js</code>파일을 생성합니다.(폴더 생성하셔서 이런 이름의 파일을 만드시면 됩니다)</p>
 <p><code>path</code>를 로드합니다.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div></pre></td></tr></table></figure>
@@ -65,48 +60,10 @@
 </li>
 </ul>
 <h3 id="3단계"><a href="#3단계" class="headerlink" title="3단계"></a>3단계</h3><p>이제 웹팩 설정 파일을 보며 복습해 봅시다!<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>);</div><div class="line"></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  entry: path.resolve(<span class="string">'src/index.jsx'</span>),</div><div class="line">  output: &#123;</div><div class="line">    path: path.resolve(<span class="string">'dist'</span>),</div><div class="line">    filename: <span class="string">'bundle.js'</span></div><div class="line">  &#125;,</div><div class="line">  <span class="built_in">module</span>: &#123;</div><div class="line">    rules: [&#123;</div><div class="line">      test: <span class="regexp">/\.jsx?$/</span>,</div><div class="line">      loader: <span class="string">'eslint-loader'</span>,</div><div class="line">      exclude: <span class="regexp">/node_modules/</span>,</div><div class="line">      enforce: <span class="string">'pre'</span></div><div class="line">    &#125;, &#123;</div><div class="line">      test: <span class="regexp">/\.jsx?$/</span>,</div><div class="line">      exclude: <span class="regexp">/node_modules/</span>,</div><div class="line">      loader: <span class="string">'babel-loader'</span></div><div class="line">    &#125;, &#123;</div><div class="line">      test: <span class="regexp">/\.hbs$/</span>,</div><div class="line">      loader: <span class="string">'handlebars-loader'</span></div><div class="line">    &#125;, &#123;</div><div class="line">      test: <span class="regexp">/\.css$/</span>,</div><div class="line">      loader: <span class="string">'style-loader'</span></div><div class="line">    &#125;, &#123;</div><div class="line">      test: <span class="regexp">/\.css$/</span>,</div><div class="line">      loader: <span class="string">'css-loader'</span></div><div class="line">    &#125;, &#123;</div><div class="line">      test: <span class="regexp">/\.(png|jpg|gif|ttf|eot|woff|woff2|svg)$/</span>,</div><div class="line">      loader: <span class="string">'url-loader'</span></div><div class="line">    &#125;]</div><div class="line">  &#125;,</div><div class="line">  devtool: <span class="string">'cheap-module-eval-source-map'</span>,</div><div class="line">  resolve: &#123;</div><div class="line">    extensions: [<span class="string">'.js'</span>, <span class="string">'.jsx'</span>]</div><div class="line">  &#125;,</div><div class="line">  plugins: [],</div><div class="line">  devServer: &#123;</div><div class="line">    contentBase: path.join(__dirname, <span class="string">'dist'</span>),</div><div class="line">    compress: <span class="literal">true</span>,</div><div class="line">    port: <span class="number">9000</span></div><div class="line">  &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;a href=&quot;https://webpack.js.org/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Webpack&lt;/a&gt;는 자바스크립트를 위한 모듈 번들러입니다.&lt;br&gt;&lt;img 
-    
-    </summary>
-    
-    
-      <category term="webpack" scheme="https://GITHUB_ID.github.io/tags/webpack/"/>
-    
-      <category term="v2" scheme="https://GITHUB_ID.github.io/tags/v2/"/>
-    
-      <category term="bundler" scheme="https://GITHUB_ID.github.io/tags/bundler/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://GITHUB_ID.github.io/2017/07/31/hello-world/"/>
-    <id>https://GITHUB_ID.github.io/2017/07/31/hello-world/</id>
-    <published>2017-07-30T17:09:07.000Z</published>
-    <updated>2017-07-30T17:09:07.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" rel="external nofollow noopener noreferrer" target="_blank">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" rel="external nofollow noopener noreferrer" target="_blank">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" rel="external nofollow noopener noreferrer" target="_blank">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" rel="external nofollow noopener noreferrer" target="_blank">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" rel="external nofollow noopener noreferrer" target="_blank">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" rel="external nofollow noopener noreferrer" target="_blank">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" rel="external nofollow noopener noreferrer" target="_blank">Deployment</a><br><a href="/">Test Link</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Hexo&lt;/a&gt;! This is your very first post.
-    
-    </summary>
-    
-    
-  </entry>
-  
-</feed>
+</div><div class="article__tags"><a href="/tags/webpack/" class="article__tags__item">webpack</a><a href="/tags/v2/" class="article__tags__item">v2</a><a href="/tags/bundler/" class="article__tags__item">bundler</a></div><div itemscope="" itemprop="author" itemtype="https://schema.org/Person" class="article__author"><img src="/images/avatar.jpg" alt="SangCheol Lee" class="article__author__image"><a title="About SangCheol Lee" rel="author" class="article__author__link">SangCheol Lee</a><p class="article__author__desc"></p><div class="article__author__socials"></div><meta itemprop="name" content="SangCheol Lee"></div><div id="sharer" class="sharer"><div class="sharer-inner"><div class="sharer__right"><button id="sharer-facebook" class="sharer__item"><i class="fa fa-facebook-official"></i></button><button id="sharer-twitter" class="sharer__item"><i class="fa fa-twitter"></i></button><button id="sharer-pinterest" class="sharer__item"><i class="fa fa-pinterest"></i></button><button id="sharer-pocket" class="sharer__item"><i class="fa fa-get-pocket"></i></button></div></div></div><!-- Disqus Code--><div id="disqus_thread"></div><script>(function() {
+  var d = document, s = d.createElement('script');
+  s.src = '//lsctech.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();</script><noscript>Enable JavaScript to see comments.</noscript><!-- Meta Tags for Structured Data--><meta itemprop="dateModified" content="2017-08-03T12:39:39.000Z"><meta itemprop="articleBody" content="Webpack는 자바스크립트를 위한 모듈 번들러입니다.많이 쓰이지만 처음 접하면 굉장히 복잡한 도구 중 하나라고 생각합니다.이런 복잡함을 해소하기 위해서 보통 스타터킷으로 많이 시작하곤 하죠.그렇기에 설정들이 무엇을 의미하는지 알기가 쉽지 않습니다.우리는 간단하게 webpack의 설정들이 무엇인지 알아보는 시간을 갖도록 하겠습니다.!!
+Webpack..."><meta itemprop="url" content="https://GITHUB_ID.github.io/2017/08/03/Webpack/"><meta itemprop="mainEntityOfPage" content="https://GITHUB_ID.github.io/2017/08/03/Webpack/"><div itemscope="" itemtype="https://schema.org/Organization" itemprop="publisher"><meta itemprop="name" content="인문학적 개발"><div itemscope="" itemprop="logo" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://GITHUB_ID.github.io/images/webpack.png"></div></div><div itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image"><meta itemprop="contentUrl" content="https://GITHUB_ID.github.io/images/webpack.png"><meta itemprop="url" content="https://GITHUB_ID.github.io/images/webpack.png"><meta itemprop="width" content="1280"><meta itemprop="height" content="720"></div></article></div></div><footer id="footer"><div class="widgets"><div class="widgets-inner"><!-- Jade doesn't support dynamic inclusion with `each`.--><!-- So, I just hard coded the file names that will be included.--><div class="widgets__item"><h3 class="widgets__item__heading">Recent posts</h3><ul class="recent-posts"><li class="recent-posts__item"><a href="/2017/08/03/Webpack/">Webpack</a></li><li class="recent-posts__item"><a href="/2017/07/31/hello-world/">Hello World</a></li></ul></div><div class="widgets__item"><h3 class="widgets__item__heading">Tags</h3><ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/bundler/">bundler</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/v2/">v2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">1</span></li></ul></div><div class="widgets__item"><h3 class="widgets__item__heading">Categories</h3></div></div></div><p class="copyright"><small>© 2017 SangCheol Lee<br>Powered by <a href="https://hexo.io" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a>, Theme by <a href="https://github.com/hyunseob" rel="external nofollow noopener noreferrer" target="_blank">HyunSeob</a></small></p></footer><script src="/js/sharer.min.js"></script></body></html>
