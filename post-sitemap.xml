@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://GITHUB_ID.github.io/2017/08/03/let-const/</loc>
+        <lastmod>2017-08-03T15:31:59.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://GITHUB_ID.github.io/2017/08/03/Webpack/</loc>
         <lastmod>2017-08-03T12:39:39.000Z</lastmod>
         <changefreq>weekly</changefreq>
