@@ -65,7 +65,7 @@ widgets:
   - categories
 
 # Other Services
-google_analytics:
+google_analytics: UA-103952799-1
 google_site_verification:
 naver_site_verification:
 
@@ -74,3 +74,4 @@ facebook:
 fb_admin:
 twitter:
 google_plus:
+

@@ -96,3 +96,7 @@ deploy:
   type: git
   repo: https://github.com/lsc900427/lsc900427.github.io
   branch: master
+
+
+# Please put your shortname of disqus here.
+disqus_shortname: lsc900Tec
