@@ -5,7 +5,7 @@ menu:
   Archives: /archives
 
 # Images
-favicon: /images/webpack.png
+favicon: /images/logo.jpg
 ## Post default banner image
 ## Please specify width and height for google's structured data (Schema.org SEO)
 default:
