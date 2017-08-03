@@ -81,4 +81,4 @@ google_plus:
 search:
     insight: true
     swiftype:
-    baidu: false
+    baidu: true
