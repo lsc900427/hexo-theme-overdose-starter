@@ -1,7 +1,7 @@
 # main menu navigation
 menu:
   Home: /
-  About: /about
+  About: https://about.me/leesangcheol/edit
   Archives: /archives
 
 # Images
