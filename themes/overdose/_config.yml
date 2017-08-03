@@ -9,7 +9,7 @@ favicon: /images/logo.jpg
 ## Post default banner image
 ## Please specify width and height for google's structured data (Schema.org SEO)
 default:
-  url: /images/webpack.png
+  url: /images/logo.jpg
   width: 1280
   height: 720
 
