@@ -5,11 +5,11 @@ menu:
   Archives: /archives
 
 # Images
-favicon: /images/logo.svg
+favicon: /images/webpack.png
 ## Post default banner image
 ## Please specify width and height for google's structured data (Schema.org SEO)
 default:
-  url: /images/default.jpg
+  url: /images/webpack.png
   width: 1280
   height: 720
 
