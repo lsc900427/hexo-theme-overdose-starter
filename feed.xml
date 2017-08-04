@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://GITHUB_ID.github.io/"/>
-  <updated>2017-08-04T11:56:50.000Z</updated>
+  <updated>2017-08-04T12:02:00.000Z</updated>
   <id>https://GITHUB_ID.github.io/</id>
   
   <author>
@@ -16,27 +16,25 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>ES6__proto__</title>
-    <link href="https://GITHUB_ID.github.io/2017/08/04/proto_es6/"/>
-    <id>https://GITHUB_ID.github.io/2017/08/04/proto_es6/</id>
-    <published>2017-08-04T10:14:14.000Z</published>
-    <updated>2017-08-04T11:56:50.000Z</updated>
+    <title>__proto__</title>
+    <link href="https://GITHUB_ID.github.io/2017/08/04/proto/"/>
+    <id>https://GITHUB_ID.github.io/2017/08/04/proto/</id>
+    <published>2017-08-04T11:59:01.000Z</published>
+    <updated>2017-08-04T12:02:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="../../../../images/es6.png" alt="html"></p>
-<h2 id="ES5에서는-객체-리터럴을-상속하기-위해서-Object-create-란-함수를-사용했다"><a href="#ES5에서는-객체-리터럴을-상속하기-위해서-Object-create-란-함수를-사용했다" class="headerlink" title="ES5에서는 객체 리터럴을 상속하기 위해서 Object.create()란 함수를 사용했다."></a>ES5에서는 객체 리터럴을 상속하기 위해서 Object.create()란 함수를 사용했다.</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Car = &#123;</div><div class="line">  name: <span class="string">'고급차'</span>,</div><div class="line">  <span class="keyword">do</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name +<span class="string">'삽니다.'</span>);</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> maserati = <span class="built_in">Object</span>.create(Car);</div><div class="line">maserati.name = <span class="string">'마세라티'</span>;</div><div class="line"></div><div class="line">Car.do();</div><div class="line">maserati.do();</div></pre></td></tr></table></figure>
-<h2 id="ES6에서는-객체리터럴-내부에서-proto-프로퍼티-직접-설정-가능하다"><a href="#ES6에서는-객체리터럴-내부에서-proto-프로퍼티-직접-설정-가능하다" class="headerlink" title="ES6에서는 객체리터럴 내부에서 proto 프로퍼티 직접 설정 가능하다."></a>ES6에서는 객체리터럴 내부에서 <strong>proto</strong> 프로퍼티 직접 설정 가능하다.</h2><figure class="highlight plain"><figcaption><span>6</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">const Car = &#123;</div><div class="line">  name: &apos;고급차&apos;,</div><div class="line">  do() &#123;</div><div class="line">    console.log(this.name + &apos;삽니다&apos;)</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">const maserati = &#123;</div><div class="line">  name: &apos;마세라티&apos;,</div><div class="line">  __proto__: Car</div><div class="line">&#125;;</div><div class="line"></div><div class="line">Car.do();</div><div class="line">maserati.do();</div></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<h2 id="ES5에서는-객체-리터럴을-상속하기-위해서-Object-create-란-함수를-사용했다"><a href="#ES5에서는-객체-리터럴을-상속하기-위해서-Object-create-란-함수를-사용했다" class="headerlink" title="ES5에서는 객체 리터럴을 상속하기 위해서 Object.create()란 함수를 사용했다."></a>ES5에서는 객체 리터럴을 상속하기 위해서 Object.create()란 함수를 사용했다.</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Car = &#123;</div><div class="line">  name: <span class="string">'고급차'</span>,</div><div class="line">  <span class="keyword">do</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name +<span class="string">'삽니다.'</span>);</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> maserati = <span class="built_in">Object</span>.create(Car);</div><div class="line">maserati.name = <span class="string">'마세라티'</span>;</div><div class="line">Car.do();</div><div class="line">maserati.do();</div></pre></td></tr></table></figure>
+<h2 id="ES6에서는-객체리터럴-내부에서-proto-프로퍼티-직접-설정-가능하다"><a href="#ES6에서는-객체리터럴-내부에서-proto-프로퍼티-직접-설정-가능하다" class="headerlink" title="ES6에서는 객체리터럴 내부에서 proto 프로퍼티 직접 설정 가능하다."></a>ES6에서는 객체리터럴 내부에서 proto 프로퍼티 직접 설정 가능하다.</h2><figure class="highlight plain"><figcaption><span>6</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">const Car = &#123;</div><div class="line">  name: &apos;고급차&apos;,</div><div class="line">  do() &#123;</div><div class="line">    console.log(this.name + &apos;삽니다&apos;)</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line">const maserati = &#123;</div><div class="line">  name: &apos;마세라티&apos;,</div><div class="line">  __proto__: Car</div><div class="line">&#125;;</div><div class="line">Car.do();</div><div class="line">maserati.do();</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;../../../../images/es6.png&quot; alt=&quot;html&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;ES5에서는-객체-리터럴을-상속하기-위해서-Object-create-란-함수를-사용했다&quot;&gt;&lt;a href=&quot;#ES5에서는-객체-리터럴을-
+      &lt;h2 id=&quot;ES5에서는-객체-리터럴을-상속하기-위해서-Object-create-란-함수를-사용했다&quot;&gt;&lt;a href=&quot;#ES5에서는-객체-리터럴을-상속하기-위해서-Object-create-란-함수를-사용했다&quot; class=&quot;headerlink&quot; tit
     
     </summary>
     
     
       <category term="ES6" scheme="https://GITHUB_ID.github.io/tags/ES6/"/>
     
-      <category term="proto" scheme="https://GITHUB_ID.github.io/tags/proto/"/>
+      <category term="__proto__" scheme="https://GITHUB_ID.github.io/tags/proto/"/>
     
   </entry>
   
