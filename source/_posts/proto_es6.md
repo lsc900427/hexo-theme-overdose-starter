@@ -1,5 +1,5 @@
 ---
-title: ES6-destructuring
+title: ES6__proto__
 date: 2017-08-04 19:14:14
 tags: [ES6, proto]
 ---
