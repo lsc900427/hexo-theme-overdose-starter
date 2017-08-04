@@ -4,7 +4,7 @@ date: 2017-08-04 02:34:26
 tags: rest parameter,spread, ES6
 ---
 ![html](../../../../images/es6.png)
-##기본 파라미터 초기값
+## 기본 파라미터 초기값
 
 ```js
 function a(x, y) {
@@ -48,7 +48,7 @@ a(...[1,2,3])
 spread연산자는 인수에 rest는 파라미터에
 spread 연산자는 순서 상관없이 사용가능하다.
 
-##배열로 활용하는 법을 알아보자
+## 배열로 활용하는 법을 알아보자
 
 ```js
 // 기존 배열을 새로운 배열로 합칠경우
@@ -69,6 +69,31 @@ var arr2 = [3, 4];
 
 Array.prototype.push.apply(arr1, arr2);
 console.log(arr1); // [1, 2, 3, 4]
+
+const arr1 = [1, 2];
+const arr2 = [3, 4];
+
+arr1.push(...arr2); // arr1.push(3, 4);
+console.log(arr1); //[1, 2, 3, 4];
+
+//copy
+
+//ES5
+var arr1 = [1, 2];
+var arr1copy = arr1.slice();
+
+arr1copy.push(3);
+console.log(arr1copy); // [1, 2, 3];
+console.log(arr1); // [1, 2];
+
+//ES6
+const arr1 = [1, 2, 3];
+const arr1copy = [...arr1];
+
+arr1copy.push(3);
+console.log(arr1copy); // [1, 2, 3];
+console.log(arr1); // [1, 2];
+
 
 
 ```
