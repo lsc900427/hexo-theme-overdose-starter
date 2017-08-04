@@ -1,7 +1,7 @@
 ---
-title: ES6-proto
-date: 2017-08-04 18:03:24
-tags:[proto, ES6]
+title: ES6-destructuring
+date: 2017-08-04 19:14:14
+tags: [ES6, proto]
 ---
 
 ![html](../../../../images/es6.png)
