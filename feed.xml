@@ -5,7 +5,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://GITHUB_ID.github.io/"/>
-  <updated>2017-08-03T15:31:59.000Z</updated>
+  <updated>2017-08-04T07:45:15.000Z</updated>
   <id>https://GITHUB_ID.github.io/</id>
   
   <author>
@@ -14,6 +14,110 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>post</title>
+    <link href="https://GITHUB_ID.github.io/2017/08/04/rest,%20spread/"/>
+    <id>https://GITHUB_ID.github.io/2017/08/04/rest, spread/</id>
+    <published>2017-08-03T17:34:26.000Z</published>
+    <updated>2017-08-04T07:45:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="../../../../images/es6.png" alt="html"></p>
+<p>##기본 파라미터 초기값</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">  x = x || <span class="number">0</span>;</div><div class="line">  y = y || <span class="number">0</span>;</div><div class="line">  </div><div class="line">  <span class="keyword">return</span> x + y;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(a()); <span class="comment">//0</span></div><div class="line"><span class="built_in">console</span>.log(plus(<span class="number">1</span>,<span class="number">2</span>)); <span class="comment">//3</span></div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params">x= <span class="number">0</span>, y=<span class="number">0</span></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> x + y;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(a());</div><div class="line"><span class="built_in">console</span>.log(a(<span class="number">1</span>,<span class="number">2</span>));</div></pre></td></tr></table></figure>
+<h2 id="Rest-Parameter"><a href="#Rest-Parameter" class="headerlink" title="Rest Parameter"></a>Rest Parameter</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params">...rest</span>) </span>&#123;</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Array</span>.isArray(rest));</div><div class="line"><span class="built_in">console</span>.log(rest);</div><div class="line">&#125;</div><div class="line">a(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>)</div></pre></td></tr></table></figure>
+<p>Rest 파라미터는 반드시 마지막 파라미터여야 한다.</p>
+<h3 id="Spread-연산자"><a href="#Spread-연산자" class="headerlink" title="Spread 연산자"></a>Spread 연산자</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="function">(<span class="params">x, y, z</span>) =&gt;</span> &#123;</div><div class="line">  <span class="built_in">console</span>.log(x);</div><div class="line">  <span class="built_in">console</span>.log(y);</div><div class="line">  <span class="built_in">console</span>.log(z);</div><div class="line">&#125;</div><div class="line">a(...[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>])</div></pre></td></tr></table></figure>
+<p>spread연산자는 인수에 rest는 파라미터에<br>spread 연산자는 순서 상관없이 사용가능하다.</p>
+<p>##배열로 활용하는 법을 알아보자</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 기존 배열을 새로운 배열로 합칠경우</span></div><div class="line"><span class="comment">// ES5 </span></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"><span class="built_in">console</span>.log(arr.concat([<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>])); <span class="comment">// [1,2,3,4,5,6]</span></div><div class="line"></div><div class="line"><span class="comment">//ES6</span></div><div class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</div><div class="line"><span class="built_in">console</span>.log([...arr, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]); <span class="comment">// [1, 2, 3, 4, 5, 6]</span></div><div class="line"></div><div class="line"><span class="comment">//push</span></div><div class="line"></div><div class="line"><span class="comment">//ES5</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>];</div><div class="line"><span class="keyword">var</span> arr2 = [<span class="number">3</span>, <span class="number">4</span>];</div><div class="line"></div><div class="line"><span class="built_in">Array</span>.prototype.push.apply(arr1, arr2);</div><div class="line"><span class="built_in">console</span>.log(arr1); <span class="comment">// [1, 2, 3, 4]</span></div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;../../../../images/es6.png&quot; alt=&quot;html&quot;&gt;&lt;/p&gt;
+&lt;p&gt;##기본 파라미터 초기값&lt;/p&gt;
+&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pr
+    
+    </summary>
+    
+    
+      <category term="rest parameter,spread, ES6" scheme="https://GITHUB_ID.github.io/tags/rest-parameter-spread-ES6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>화살표 함수</title>
+    <link href="https://GITHUB_ID.github.io/2017/08/04/arrow_funtion/"/>
+    <id>https://GITHUB_ID.github.io/2017/08/04/arrow_funtion/</id>
+    <published>2017-08-03T15:57:12.000Z</published>
+    <updated>2017-08-04T07:45:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="../../../../images/es6.png" alt="html"></p>
+<h1 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h1><hr>
+<p>##화살표 함수의 호출<br>화살표 함수는 익명함수로만 사용할 수 있다.<br>따라서 호출하기 위해서는 함수표현식을 사용한다.</p>
+<p>콜백함수로도 사용할 수 있다.</p>
+<h2 id="arguments와-rest파라미터"><a href="#arguments와-rest파라미터" class="headerlink" title="arguments와 rest파라미터"></a>arguments와 rest파라미터</h2><p>arguments 객체는 유사배열 객체이다<br>함수 객체의 arguments 프로퍼티는 객체를 값으로 가지며 함수 내부에서 지역변수처럼 사용된다.</p>
+<p>Es6는 arguments 프로퍼티가 없기 때문에 rest파라미터를 활용하여 가변인자를 함수내부에 배열로 전달 할 수 있다.</p>
+<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><p>function 키워드를 사용하여 생성한 일반 함수와 Arrow function과의 가장 큰 차이점은 this이다</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Prefixer</span>(<span class="params">prefix</span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.prefix = prefix;</div><div class="line">&#125;</div><div class="line"></div><div class="line">Prefixer.prototype.prefixArray = <span class="function"><span class="keyword">function</span> (<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="comment">// (A)</span></div><div class="line">  <span class="keyword">return</span> arr.map(<span class="function"><span class="keyword">function</span> (<span class="params">x</span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.prefix + <span class="string">' '</span> + x; <span class="comment">// (B)</span></div><div class="line">  &#125;);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> pre = <span class="keyword">new</span> Prefixer(<span class="string">'Hi'</span>);</div><div class="line"><span class="built_in">console</span>.log(pre.prefixArray([<span class="string">'Lee'</span>, <span class="string">'Kim'</span>]));</div></pre></td></tr></table></figure>
+<p>여기서 this가 생성자 함수의 인스턴스로 기대하였겠지만<br>프로토타입의 처음으로 실행하는 경우의 함수만 인스턴스로 인식이 되고 두번째 부터는 전역함수로 this가 할당이 되기 때문에<br>예상되는 결과가 나오지 않게 된다. 그렇기 때문에 이를 해결하기 위해서<br>4가지 방법이 있다.<br>첫번째는 프로토압의 첫번째 함수에 var that = this; 를대입시켜<br>that.prefix를 만들어주는 방법이다.</p>
+<p>두번째는 function(arr){return arr.map(), this}<br>이후 두번째 인자로 this를 잡아주는 방법이다ㅏ</p>
+<ul>
+<li>이는 map의 두번째 인자의 역할 때문이다.</li>
+</ul>
+<p>세번째는 bind(this)를 이용하는 것이다.</p>
+<ul>
+<li>bind 같은 경우는 첫번째 인자가 그 스코프에서의 변수기 때문에 bind(this)를 사용할 경우<br>this가 인스턴스인 this가 this로 들어가게 된다.</li>
+</ul>
+<p>call이 안되는 이유는 call은 호출을 해버리기에 값이 함수가 아니라는 에러가 뜨게 된다.</p>
+<p>네번째는 애로우 함수의 this이다</p>
+<ul>
+<li>애로우 함수의 this 언제나 자신이 포함된 외부 스코프에서 this를 계승 받는다 즉 this를 생성하지 않고 자신을 포함하는 컨텍스트로부터 this를 계승받는 것이다.</li>
+</ul>
+<p>이로인해서 쓰이면 안되는 곳이 있다.</p>
+<ol>
+<li>메소드 안에 함수를사용하면 외부의 디스를 가져와서 전역 객체에 바인딩 된다.<br>축약형 표현을 사용해라 () {}</li>
+<li>prototype에 할당하는 경우도 동일한 문제가 발생한다.<br>왜냐면 프로토 타입에도 처음 익명함수는 그 객체이기 때문이다.</li>
+<li>생성자함수는 아예 존재하지 않는다. 그러므로애로우 함수는 생성자 함수로 사용 불가능하다. 프로토타입 프로퍼티가 존재하지 않기 때문이다.</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;../../../../images/es6.png&quot; alt=&quot;html&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;Syntax&quot;&gt;&lt;a href=&quot;#Syntax&quot; class=&quot;headerlink&quot; title=&quot;Syntax&quot;&gt;&lt;/a&gt;Syntax&lt;/h1&gt;
+    
+    </summary>
+    
+    
+      <category term="ES6, ES2015, Arrow function, this, scope" scheme="https://GITHUB_ID.github.io/tags/ES6-ES2015-Arrow-function-this-scope/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ES6 템플릿 리터럴</title>
+    <link href="https://GITHUB_ID.github.io/2017/08/04/template_literal/"/>
+    <id>https://GITHUB_ID.github.io/2017/08/04/template_literal/</id>
+    <published>2017-08-03T15:34:47.000Z</published>
+    <updated>2017-08-04T07:45:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="../../../../images/es6.png" alt="html"><br>ES6는 템플릿 리터럴이라 불리는 새로운 문자열 표기법을 도입했다.<br>공백을 표현하기 위해서는 이스케이프 시퀀스를 사용해야한다.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> strings =</div><div class="line"><span class="string">`&lt;li&gt;밥&lt;/li&gt;</span></div><div class="line"><span class="string">&lt;li&gt;반찬&lt;/li&gt;</span></div><div class="line"><span class="string">&lt;li&gt;고기&lt;/li&gt;`</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(strings)</div></pre></td></tr></table></figure>
+<p>문자열 삽입, 표현식에 새로운 방식을 도입했다.<br><code>${문자열}</code>, <code>${자바스크립트 표현}</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> first = <span class="string">'이'</span>;</div><div class="line"><span class="keyword">const</span> last = <span class="string">'지'</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'정말'</span> + first + last);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">`정말<span class="subst">$&#123;first&#125;</span><span class="subst">$&#123;last&#125;</span>`</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;first === <span class="string">'이'</span>&#125;</span>`</span>)</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;../../../../images/es6.png&quot; alt=&quot;html&quot;&gt;&lt;br&gt;ES6는 템플릿 리터럴이라 불리는 새로운 문자열 표기법을 도입했다.&lt;br&gt;공백을 표현하기 위해서는 이스케이프 시퀀스를 사용해야한다.&lt;/p&gt;
+&lt;figur
+    
+    </summary>
+    
+    
+      <category term="ES2015, ES6, template-literal" scheme="https://GITHUB_ID.github.io/tags/ES2015-ES6-template-literal/"/>
+    
+  </entry>
   
   <entry>
     <title>Es6 let,const</title>
