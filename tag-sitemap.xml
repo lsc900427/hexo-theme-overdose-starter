@@ -58,13 +58,6 @@
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/tags/ES6/</loc>
-        <lastmod>2017-08-04T11:42:19.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://GITHUB_ID.github.io/tags/ES2015/</loc>
         <lastmod>2017-08-04T11:42:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -88,6 +81,20 @@
     <url>
         <loc>https://GITHUB_ID.github.io/tags/scope/</loc>
         <lastmod>2017-08-04T11:42:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://GITHUB_ID.github.io/tags/ES6/</loc>
+        <lastmod>2017-08-04T11:55:50.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://GITHUB_ID.github.io/tags/proto/</loc>
+        <lastmod>2017-08-04T11:55:50.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

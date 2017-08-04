@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>https://GITHUB_ID.github.io/2017/08/04/proto_es6/</loc>
+        <lastmod>2017-08-04T11:55:50.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://GITHUB_ID.github.io/2017/08/03/let-const/</loc>
         <lastmod>2017-08-04T11:48:25.000Z</lastmod>
         <changefreq>weekly</changefreq>
