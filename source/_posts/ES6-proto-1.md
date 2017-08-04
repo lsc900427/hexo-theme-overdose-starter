@@ -1,7 +1,7 @@
 ---
-title: ES6__proto__
+title: ES6-proto
 date: 2017-08-04 18:03:24
-tags:[__proto__, ES6]
+tags:[proto, ES6]
 ---
 
 ![html](../../../../images/es6.png)
@@ -11,13 +11,13 @@ tags:[__proto__, ES6]
 ```js
 var Car = {
   name: '고급차',
-  do() {
+  do: function() {
     console.log(this.name +'삽니다.');
   }
 };
 
 var maserati = Object.create(Car);
-maserati.name = '마세라티'
+maserati.name = '마세라티';
 
 Car.do();
 maserati.do();
@@ -25,7 +25,7 @@ maserati.do();
 
 ## ES6에서는 객체리터럴 내부에서 __proto__ 프로퍼티 직접 설정 가능하다.
 
-```js
+```ecmascript 6
 const Car = {
   name: '고급차',
   do() {
