@@ -1,7 +1,7 @@
 ---
 title: Rest parameter
 date: 2017-08-04 02:34:26
-tags: rest parameter,spread, ES6
+tags: [rest parameter,spread, ES6]
 ---
 ![html](../../../../images/es6.png)
 ## 기본 파라미터 초기값

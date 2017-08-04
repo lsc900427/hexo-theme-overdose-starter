@@ -1,6 +1,28 @@
-const arr = [1,2,3];
+var parent = {
+  name: 'parent',
+  sayHi() {
+    console.log('Hi! ' + this.name);
+  }
+};
 
-const arr2 = [4,5,6];
+var child = Object.create(parent);
+child.name = 'child';
 
-arr1.push(...arr2);
-console.log(arr1)
+parent.sayHi();
+child.sayHi();
+
+
+const parent = {
+  name: 'parent',
+  sayHi() {
+    console.log('Hi! ' + this.name);
+  }
+};
+
+const child = {
+  __proto__: parent,
+  name: 'child'
+};
+
+parent.sayHi();
+child.sayHi();
