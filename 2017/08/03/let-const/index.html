@@ -1,22 +1,23 @@
 <!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>Es6 let,const | &lt;= 쉽게 읽히는</title><link rel="stylesheet" href="/libs/noto-sans-kr/styles.css"><link rel="stylesheet" href="/css/font.css"><link rel="stylesheet" href="/libs/normalize.min.css"><link rel="stylesheet" href="/libs/font-awesome-4.6.3/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/css/highlights/dracula.css"><link rel="canonical" href="https://GITHUB_ID.github.io/2017/08/03/let-const/">
-<meta name="description" content="ES5에서 변수 선언의 유일한 방법 =&amp;gt; var 키워드var 키워드의 특징 Function-level scope  전역 변수의 남용 문제 for문에서 사용한 변수의 전역 참조 문제123456var a = 1;console.log(a); //1&amp;#123; var a = 2; &amp;#125;console.log(a); //2   var 키워드 생략 가능  의">
+<meta name="description" content="ES5에서 변수 선언의 유일한 방법 =&amp;gt; var 키워드var 키워드의 특징 Function-level scope  전역 변수의 남용 문제 for문에서 사용한 변수의 전역 참조 문제123456var a = 1;console.log(a); //1&amp;#123; var a = 2; &amp;#125;console.log(a); //2   var 키워드 생략 가능">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Es6 let,const">
 <meta property="og:url" content="https://GITHUB_ID.github.io/2017/08/03/let-const/index.html">
 <meta property="og:site_name" content="&lt;= 쉽게 읽히는">
-<meta property="og:description" content="ES5에서 변수 선언의 유일한 방법 =&amp;gt; var 키워드var 키워드의 특징 Function-level scope  전역 변수의 남용 문제 for문에서 사용한 변수의 전역 참조 문제123456var a = 1;console.log(a); //1&amp;#123; var a = 2; &amp;#125;console.log(a); //2   var 키워드 생략 가능  의">
+<meta property="og:description" content="ES5에서 변수 선언의 유일한 방법 =&amp;gt; var 키워드var 키워드의 특징 Function-level scope  전역 변수의 남용 문제 for문에서 사용한 변수의 전역 참조 문제123456var a = 1;console.log(a); //1&amp;#123; var a = 2; &amp;#125;console.log(a); //2   var 키워드 생략 가능">
 <meta property="og:locale" content="ko">
-<meta property="og:image" content="https://github_id.github.io/images/logo.jpg">
-<meta property="og:updated_time" content="2017-08-03T15:31:59.000Z">
+<meta property="og:image" content="https://github_id.github.io/images/es6.png">
+<meta property="og:updated_time" content="2017-08-04T11:48:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Es6 let,const">
-<meta name="twitter:description" content="ES5에서 변수 선언의 유일한 방법 =&amp;gt; var 키워드var 키워드의 특징 Function-level scope  전역 변수의 남용 문제 for문에서 사용한 변수의 전역 참조 문제123456var a = 1;console.log(a); //1&amp;#123; var a = 2; &amp;#125;console.log(a); //2   var 키워드 생략 가능  의">
-<meta name="twitter:image" content="https://github_id.github.io/images/logo.jpg"><meta property="article:author" content="SangCheol Lee"><link rel="icon" href="/images/logo.jpg"><script>(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+<meta name="twitter:description" content="ES5에서 변수 선언의 유일한 방법 =&amp;gt; var 키워드var 키워드의 특징 Function-level scope  전역 변수의 남용 문제 for문에서 사용한 변수의 전역 참조 문제123456var a = 1;console.log(a); //1&amp;#123; var a = 2; &amp;#125;console.log(a); //2   var 키워드 생략 가능">
+<meta name="twitter:image" content="https://github_id.github.io/images/es6.png"><meta property="article:author" content="SangCheol Lee"><link rel="icon" href="/images/logo.jpg"><script>(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-103952799-1', 'auto');
-ga('send', 'pageview');</script></head><body itemscope="" itemtype="https://schema.org/WebPage"><nav id="menu" class="menu"><div class="menu-inner"><div class="menu__left-area"><div class="menu__item"><a href="/" title="Home" rel="home" class="menu__item__link menu__item__link--brand"><img src="/images/logo.jpg" alt="&lt;= 쉽게 읽히는" class="menu__item__link--brand__image"><span class="menu__item__link--brand__label">&lt;= 쉽게 읽히는</span></a></div></div><div class="menu__right-area"><div class="menu__item"><a href="/" class="menu__item__link">Home</a></div><div class="menu__item"><a href="https://about.me/leesangcheol/edit" class="menu__item__link" rel="external nofollow noopener noreferrer" target="_blank">About</a></div><div class="menu__item"><a href="/archives" class="menu__item__link">Archives</a></div><div class="menu__item"><a href="http://lsc1034.cafe24.com/" class="menu__item__link" rel="external nofollow noopener noreferrer" target="_blank">Todolist</a></div></div></div></nav><div class="page-background"></div><div class="content-outer"><div itemscope="" itemtype="https://schema.org/Blog" class="content-inner"><article id="article" itemscope="" itemtype="https://schema.org/BlogPosting" class="article"><h1 itemprop="headline" class="article__title">Es6 let,const</h1><div class="article__meta"><time datetime="2017-08-03T14:08:41.000Z" itemprop="datePublished" class="article__meta__time">2017-08-03 23:08:41</time></div><hr><div class="article__contents"><h2 id="ES5에서-변수-선언의-유일한-방법-gt-var-키워드"><a href="#ES5에서-변수-선언의-유일한-방법-gt-var-키워드" class="headerlink" title="ES5에서 변수 선언의 유일한 방법 =&gt; var 키워드"></a>ES5에서 변수 선언의 유일한 방법 =&gt; var 키워드</h2><p><code>var 키워드의 특징</code></p>
+ga('send', 'pageview');</script></head><body itemscope="" itemtype="https://schema.org/WebPage"><nav id="menu" class="menu"><div class="menu-inner"><div class="menu__left-area"><div class="menu__item"><a href="/" title="Home" rel="home" class="menu__item__link menu__item__link--brand"><img src="/images/logo.jpg" alt="&lt;= 쉽게 읽히는" class="menu__item__link--brand__image"><span class="menu__item__link--brand__label">&lt;= 쉽게 읽히는</span></a></div></div><div class="menu__right-area"><div class="menu__item"><a href="/" class="menu__item__link">Home</a></div><div class="menu__item"><a href="https://about.me/leesangcheol/edit" class="menu__item__link" rel="external nofollow noopener noreferrer" target="_blank">About</a></div><div class="menu__item"><a href="/archives" class="menu__item__link">Archives</a></div><div class="menu__item"><a href="http://lsc1034.cafe24.com/" class="menu__item__link" rel="external nofollow noopener noreferrer" target="_blank">Todolist</a></div></div></div></nav><div class="page-background"></div><div class="content-outer"><div itemscope="" itemtype="https://schema.org/Blog" class="content-inner"><article id="article" itemscope="" itemtype="https://schema.org/BlogPosting" class="article"><h1 itemprop="headline" class="article__title">Es6 let,const</h1><div class="article__meta"><time datetime="2017-08-03T14:08:41.000Z" itemprop="datePublished" class="article__meta__time">2017-08-03 23:08:41</time></div><hr><div class="article__contents"><p><img src="../../../../images/es6.png" alt="html"></p>
+<h2 id="ES5에서-변수-선언의-유일한-방법-gt-var-키워드"><a href="#ES5에서-변수-선언의-유일한-방법-gt-var-키워드" class="headerlink" title="ES5에서 변수 선언의 유일한 방법 =&gt; var 키워드"></a>ES5에서 변수 선언의 유일한 방법 =&gt; var 키워드</h2><p><code>var 키워드의 특징</code></p>
 <p>Function-level scope</p>
 <ul>
 <li>전역 변수의 남용 문제</li>
@@ -61,7 +62,8 @@ ga('send', 'pageview');</script></head><body itemscope="" itemtype="https://sche
   s.src = '//lsctech.disqus.com/embed.js';
   s.setAttribute('data-timestamp', +new Date());
   (d.head || d.body).appendChild(s);
-})();</script><noscript>Enable JavaScript to see comments.</noscript><!-- Meta Tags for Structured Data--><meta itemprop="dateModified" content="2017-08-03T15:31:59.000Z"><meta itemprop="articleBody" content="ES5에서 변수 선언의 유일한 방법 =&amp;gt; var 키워드var 키워드의 특징
+})();</script><noscript>Enable JavaScript to see comments.</noscript><!-- Meta Tags for Structured Data--><meta itemprop="dateModified" content="2017-08-04T11:48:25.000Z"><meta itemprop="articleBody" content="
+ES5에서 변수 선언의 유일한 방법 =&amp;gt; var 키워드var 키워드의 특징
 Function-level scope
 
 전역 변수의 남용 문제

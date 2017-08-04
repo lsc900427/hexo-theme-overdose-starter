@@ -173,9 +173,10 @@
     <link href="https://GITHUB_ID.github.io/2017/08/03/let-const/"/>
     <id>https://GITHUB_ID.github.io/2017/08/03/let-const/</id>
     <published>2017-08-03T14:08:41.000Z</published>
-    <updated>2017-08-03T15:31:59.000Z</updated>
+    <updated>2017-08-04T11:48:25.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="ES5에서-변수-선언의-유일한-방법-gt-var-키워드"><a href="#ES5에서-변수-선언의-유일한-방법-gt-var-키워드" class="headerlink" title="ES5에서 변수 선언의 유일한 방법 =&gt; var 키워드"></a>ES5에서 변수 선언의 유일한 방법 =&gt; var 키워드</h2><p><code>var 키워드의 특징</code></p>
+    <content type="html"><![CDATA[<p><img src="../../../../images/es6.png" alt="html"></p>
+<h2 id="ES5에서-변수-선언의-유일한-방법-gt-var-키워드"><a href="#ES5에서-변수-선언의-유일한-방법-gt-var-키워드" class="headerlink" title="ES5에서 변수 선언의 유일한 방법 =&gt; var 키워드"></a>ES5에서 변수 선언의 유일한 방법 =&gt; var 키워드</h2><p><code>var 키워드의 특징</code></p>
 <p>Function-level scope</p>
 <ul>
 <li>전역 변수의 남용 문제</li>
@@ -219,7 +220,8 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;ES5에서-변수-선언의-유일한-방법-gt-var-키워드&quot;&gt;&lt;a href=&quot;#ES5에서-변수-선언의-유일한-방법-gt-var-키워드&quot; class=&quot;headerlink&quot; title=&quot;ES5에서 변수 선언의 유일한 방법 =&amp;gt; var 키워
+      &lt;p&gt;&lt;img src=&quot;../../../../images/es6.png&quot; alt=&quot;html&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES5에서-변수-선언의-유일한-방법-gt-var-키워드&quot;&gt;&lt;a href=&quot;#ES5에서-변수-선언의-유일한-방법-gt-var-키워드&quot; c
     
     </summary>
     
