@@ -7,16 +7,24 @@
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/2017/08/04/rest,%20spread/</loc>
-        <lastmod>2017-08-04T07:59:17.000Z</lastmod>
+        <loc>https://GITHUB_ID.github.io/2017/08/04/arrow_funtion/</loc>
+        <lastmod>2017-08-04T11:42:19.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/2017/08/04/arrow_funtion/</loc>
-        <lastmod>2017-08-04T07:52:15.000Z</lastmod>
+        <loc>https://GITHUB_ID.github.io/2017/08/04/ES6-destructuring/</loc>
+        <lastmod>2017-08-04T11:38:19.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://GITHUB_ID.github.io/2017/08/04/rest,%20spread/</loc>
+        <lastmod>2017-08-04T09:06:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -24,7 +32,7 @@
 
     <url>
         <loc>https://GITHUB_ID.github.io/2017/08/04/template_literal/</loc>
-        <lastmod>2017-08-04T07:45:15.000Z</lastmod>
+        <lastmod>2017-08-04T09:06:09.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
