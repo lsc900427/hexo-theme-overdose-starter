@@ -1,9 +1,6 @@
-var array = [];
+const arr = [1,2,3];
 
-for(var i = 0; i < 3; i++) {
-  array.push(function() {console.log(i);});
-}
+const arr2 = [4,5,6];
 
-for(var j = 0; j < 3; j++) {
-  array[j]();
-}
+arr1.push(...arr2);
+console.log(arr1)
