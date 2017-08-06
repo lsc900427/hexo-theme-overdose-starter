@@ -1,28 +1,19 @@
-var parent = {
-  name: 'parent',
-  sayHi() {
-    console.log('Hi! ' + this.name);
+class Foo {
+  constructor(prop) {
+    this.prop = prop;
   }
-};
 
-var child = Object.create(parent);
-child.name = 'child';
-
-parent.sayHi();
-child.sayHi();
-
-
-const parent = {
-  name: 'parent',
-  sayHi() {
-    console.log('Hi! ' + this.name);
+  static staticMethod() {
+    return 'staticMethod';
   }
-};
+  this.prototypeMethod() {
+    return 'prototypeMethod';
+  }
+}
 
-const child = {
-  __proto__: parent,
-  name: 'child'
-};
+const foo = new Foo(123);
 
-parent.sayHi();
-child.sayHi();
+console.log(Foo.staticMethod())
+
+console.log(Foo.prototypeMethod());
+console.log(foo.prototypeMethod())

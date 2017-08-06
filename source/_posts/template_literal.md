@@ -1,6 +1,5 @@
 ---
 title: ES6 템플릿 리터럴
-date: 2017-08-04 00:34:47
 tags: [ES2015, ES6, template-literal]
 ---
 ![html](../../../../images/es6.png)

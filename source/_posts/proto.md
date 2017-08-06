@@ -1,6 +1,5 @@
 ---
 title: __proto__
-date: 2017-08-04 20:59:01
 tags: [ES6, __proto__]
 ---
 

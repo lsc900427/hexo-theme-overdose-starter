@@ -1,7 +1,6 @@
 ---
 title: 'Es6 let,const'
-date: 2017-08-03 23:08:41
-tags:
+tags: [let, const]
 ---
 
 ![html](../../../../images/es6.png)

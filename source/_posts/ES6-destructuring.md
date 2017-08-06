@@ -1,6 +1,5 @@
 ---
 title: ES6-destructuring
-date: 2017-08-04 18:14:14
 tags: [ES6, desturcturing, 해체할당]
 ---
 ![html](../../../../images/es6.png)

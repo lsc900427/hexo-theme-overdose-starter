@@ -1,6 +1,5 @@
 ---
 title: Webpack
-date: 2017-08-03 04:42:49
 tags: [webpack, v2, bundler]
 ---
 

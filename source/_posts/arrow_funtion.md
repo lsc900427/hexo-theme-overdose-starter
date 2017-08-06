@@ -1,6 +1,5 @@
 ---
 title: 화살표 함수
-date: 2017-08-04 00:57:12
 tags: [ES6, ES2015, Arrow function, this, scope]
 ---
 ![html](../../../../images/es6.png)
