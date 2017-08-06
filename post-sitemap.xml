@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://GITHUB_ID.github.io</loc>
+        <loc>https://lsc900427.github.io</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/2017/08/04/proto/</loc>
-        <lastmod>2017-08-04T12:02:00.000Z</lastmod>
+        <loc>https://lsc900427.github.io/2017/08/06/ES6-destructuring/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/2017/08/03/let-const/</loc>
-        <lastmod>2017-08-04T11:48:25.000Z</lastmod>
+        <loc>https://lsc900427.github.io/2017/08/06/arrow_funtion/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/2017/08/04/arrow_funtion/</loc>
-        <lastmod>2017-08-04T11:42:19.000Z</lastmod>
+        <loc>https://lsc900427.github.io/2017/08/06/Webpack/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/2017/08/04/ES6-destructuring/</loc>
-        <lastmod>2017-08-04T11:38:19.000Z</lastmod>
+        <loc>https://lsc900427.github.io/2017/08/06/let-const/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/2017/08/04/rest,%20spread/</loc>
-        <lastmod>2017-08-04T09:06:09.000Z</lastmod>
+        <loc>https://lsc900427.github.io/2017/08/06/proto/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/2017/08/04/template_literal/</loc>
-        <lastmod>2017-08-04T09:06:09.000Z</lastmod>
+        <loc>https://lsc900427.github.io/2017/08/06/rest,%20spread/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/2017/08/03/Webpack/</loc>
-        <lastmod>2017-08-03T12:39:39.000Z</lastmod>
+        <loc>https://lsc900427.github.io/2017/08/06/template_literal/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/2017/07/31/hello-world/</loc>
+        <loc>https://lsc900427.github.io/2017/07/31/hello-world/</loc>
         <lastmod>2017-07-30T17:09:07.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

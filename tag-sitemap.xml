@@ -2,99 +2,113 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://GITHUB_ID.github.io/tags/webpack/</loc>
-        <lastmod>2017-08-03T12:39:39.000Z</lastmod>
+        <loc>https://lsc900427.github.io/tags/ES6/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/tags/v2/</loc>
-        <lastmod>2017-08-03T12:39:39.000Z</lastmod>
+        <loc>https://lsc900427.github.io/tags/desturcturing/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/tags/bundler/</loc>
-        <lastmod>2017-08-03T12:39:39.000Z</lastmod>
+        <loc>https://lsc900427.github.io/tags/%ED%95%B4%EC%B2%B4%ED%95%A0%EB%8B%B9/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/tags/rest-parameter/</loc>
-        <lastmod>2017-08-04T09:06:09.000Z</lastmod>
+        <loc>https://lsc900427.github.io/tags/ES2015/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/tags/spread/</loc>
-        <lastmod>2017-08-04T09:06:09.000Z</lastmod>
+        <loc>https://lsc900427.github.io/tags/Arrow-function/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/tags/template-literal/</loc>
-        <lastmod>2017-08-04T09:06:09.000Z</lastmod>
+        <loc>https://lsc900427.github.io/tags/this/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/tags/desturcturing/</loc>
-        <lastmod>2017-08-04T11:38:19.000Z</lastmod>
+        <loc>https://lsc900427.github.io/tags/scope/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/tags/%ED%95%B4%EC%B2%B4%ED%95%A0%EB%8B%B9/</loc>
-        <lastmod>2017-08-04T11:38:19.000Z</lastmod>
+        <loc>https://lsc900427.github.io/tags/webpack/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/tags/ES2015/</loc>
-        <lastmod>2017-08-04T11:42:19.000Z</lastmod>
+        <loc>https://lsc900427.github.io/tags/v2/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/tags/Arrow-function/</loc>
-        <lastmod>2017-08-04T11:42:19.000Z</lastmod>
+        <loc>https://lsc900427.github.io/tags/bundler/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/tags/this/</loc>
-        <lastmod>2017-08-04T11:42:19.000Z</lastmod>
+        <loc>https://lsc900427.github.io/tags/let/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/tags/scope/</loc>
-        <lastmod>2017-08-04T11:42:19.000Z</lastmod>
+        <loc>https://lsc900427.github.io/tags/const/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/tags/ES6/</loc>
-        <lastmod>2017-08-04T12:02:00.000Z</lastmod>
+        <loc>https://lsc900427.github.io/tags/proto/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://GITHUB_ID.github.io/tags/proto/</loc>
-        <lastmod>2017-08-04T12:02:00.000Z</lastmod>
+        <loc>https://lsc900427.github.io/tags/rest-parameter/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/tags/spread/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/tags/template-literal/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
