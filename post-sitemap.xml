@@ -7,15 +7,111 @@
     </url>
 
     <url>
-        <loc>https://lsc900427.github.io/2017/08/06/ES6-destructuring/</loc>
-        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
+        <loc>https://lsc900427.github.io/2017/10/01/git-02/</loc>
+        <lastmod>2017-10-01T03:49:03.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
     </url>
 
     <url>
-        <loc>https://lsc900427.github.io/2017/08/06/arrow_funtion/</loc>
+        <loc>https://lsc900427.github.io/2017/09/23/git-01/</loc>
+        <lastmod>2017-09-23T03:45:25.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/09/18/Context/</loc>
+        <lastmod>2017-09-17T23:29:02.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/09/14/css-rendering3/</loc>
+        <lastmod>2017-09-14T11:35:35.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/09/07/css-rendersing2/</loc>
+        <lastmod>2017-09-07T12:49:54.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/08/31/css-rendering1/</loc>
+        <lastmod>2017-08-31T12:36:58.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/08/07/Css-inheritance/</loc>
+        <lastmod>2017-08-06T20:19:04.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/08/07/Css-BoxModel/</loc>
+        <lastmod>2017-08-06T19:57:24.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/08/07/Html5-list-table/</loc>
+        <lastmod>2017-08-06T18:06:16.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/08/07/Html5-link/</loc>
+        <lastmod>2017-08-06T17:27:56.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/08/07/Html5-tag/</loc>
+        <lastmod>2017-08-06T17:05:16.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/08/07/Html5-sematicWeb/</loc>
+        <lastmod>2017-08-06T16:11:41.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/08/06/Html5/</loc>
+        <lastmod>2017-08-06T13:02:06.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/08/06/ES6-destructuring/</loc>
         <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -31,7 +127,7 @@
     </url>
 
     <url>
-        <loc>https://lsc900427.github.io/2017/08/06/let-const/</loc>
+        <loc>https://lsc900427.github.io/2017/08/06/arrow_funtion/</loc>
         <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -40,6 +136,14 @@
 
     <url>
         <loc>https://lsc900427.github.io/2017/08/06/proto/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/08/06/let-const/</loc>
         <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -57,6 +161,62 @@
     <url>
         <loc>https://lsc900427.github.io/2017/08/06/template_literal/</loc>
         <lastmod>2017-08-06T11:44:12.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/08/06/Generatore/</loc>
+        <lastmod>2017-08-05T15:37:53.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/08/05/Symbol/</loc>
+        <lastmod>2017-08-05T14:50:07.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/08/05/iteration/</loc>
+        <lastmod>2017-08-05T14:09:05.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/08/05/Promise/</loc>
+        <lastmod>2017-08-05T13:09:26.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/08/05/Module/</loc>
+        <lastmod>2017-08-05T07:57:01.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/08/05/draft/</loc>
+        <lastmod>2017-08-05T07:30:46.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/2017/08/04/class/</loc>
+        <lastmod>2017-08-05T07:11:40.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>css-Rendering | &lt;= 쉽게 읽히는</title><link rel="stylesheet" href="/libs/noto-sans-kr/styles.css"><link rel="stylesheet" href="/css/font.css"><link rel="stylesheet" href="/libs/normalize.min.css"><link rel="stylesheet" href="/libs/font-awesome-4.6.3/css/font-awesome.min.css"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="/css/highlights/dracula.css"><link rel="canonical" href="https://lsc900427.github.io/2017/08/31/css-rendering1/">
+<meta name="description" content="영역 나누기(GeoMetry Calculate) 현대의 렌더링은 geometry를 계산하고 Fragement를 한다 Geometry를 계산하는 과정을 reflow라 한다 width ,height, position칠하기(Fragment Fill) fragement는 픽셀 Fragment를 칠하는 과정을 repaint라 한다 background  현대의 시스템">
+<meta property="og:type" content="article">
+<meta property="og:title" content="css-Rendering">
+<meta property="og:url" content="https://lsc900427.github.io/2017/08/31/css-rendering1/index.html">
+<meta property="og:site_name" content="&lt;= 쉽게 읽히는">
+<meta property="og:description" content="영역 나누기(GeoMetry Calculate) 현대의 렌더링은 geometry를 계산하고 Fragement를 한다 Geometry를 계산하는 과정을 reflow라 한다 width ,height, position칠하기(Fragment Fill) fragement는 픽셀 Fragment를 칠하는 과정을 repaint라 한다 background  현대의 시스템">
+<meta property="og:locale" content="ko">
+<meta property="og:image" content="https://lsc900427.github.io/images/logo.jpg">
+<meta property="og:updated_time" content="2017-08-31T12:36:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="css-Rendering">
+<meta name="twitter:description" content="영역 나누기(GeoMetry Calculate) 현대의 렌더링은 geometry를 계산하고 Fragement를 한다 Geometry를 계산하는 과정을 reflow라 한다 width ,height, position칠하기(Fragment Fill) fragement는 픽셀 Fragment를 칠하는 과정을 repaint라 한다 background  현대의 시스템">
+<meta name="twitter:image" content="https://lsc900427.github.io/images/logo.jpg"><meta property="article:author" content="SangCheol Lee"><link rel="icon" href="/images/logo.jpg"><script>(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-103952799-1', 'auto');
+ga('send', 'pageview');</script></head><body itemscope="" itemtype="https://schema.org/WebPage"><nav id="menu" class="menu"><div class="menu-inner"><div class="menu__left-area"><div class="menu__item"><a href="/" title="Home" rel="home" class="menu__item__link menu__item__link--brand"><img src="/images/logo.jpg" alt="&lt;= 쉽게 읽히는" class="menu__item__link--brand__image"><span class="menu__item__link--brand__label">&lt;= 쉽게 읽히는</span></a></div></div><div class="menu__right-area"><div class="menu__item"><a href="/" class="menu__item__link">Home</a></div><div class="menu__item"><a href="https://about.me/leesangcheol/edit" class="menu__item__link" rel="external nofollow noopener noreferrer" target="_blank">About</a></div><div class="menu__item"><a href="/archives" class="menu__item__link">Archives</a></div><div class="menu__item"><a href="http://lsc1034.cafe24.com/" class="menu__item__link" rel="external nofollow noopener noreferrer" target="_blank">Todolist</a></div></div></div></nav><div class="page-background"></div><div class="content-outer"><div itemscope="" itemtype="https://schema.org/Blog" class="content-inner"><article id="article" itemscope="" itemtype="https://schema.org/BlogPosting" class="article"><h1 itemprop="headline" class="article__title">css-Rendering</h1><div class="article__meta"><time datetime="2017-08-31T11:30:46.000Z" itemprop="datePublished" class="article__meta__time">2017-08-31 20:30:46</time></div><hr><div class="article__contents"><h3 id="영역-나누기-GeoMetry-Calculate"><a href="#영역-나누기-GeoMetry-Calculate" class="headerlink" title="영역 나누기(GeoMetry Calculate)"></a>영역 나누기(GeoMetry Calculate)</h3><ul>
+<li>현대의 렌더링은 geometry를 계산하고 Fragement를 한다</li>
+<li>Geometry를 계산하는 과정을 reflow라 한다</li>
+<li>width ,height, position<h3 id="칠하기-Fragment-Fill"><a href="#칠하기-Fragment-Fill" class="headerlink" title="칠하기(Fragment Fill)"></a>칠하기(Fragment Fill)</h3></li>
+<li>fragement는 픽셀</li>
+<li>Fragment를 칠하는 과정을 repaint라 한다</li>
+<li>background</li>
+</ul>
+<p>현대의 시스템은 영역을 나누고 색을 칠하는 것이 기본이다<br>부하는 fragment fill에서 많이 받는 것 같지만<br>reflow의 변화가 일어나면 전부 다시그려야해서 부하를 더 많이 받는다.<br>geomery쪽 표현을 이해하는 것이 더 어렵다<br>색칠하는 쪽은 위에 비해 국소적인 표현이기 때문에 더 쉽다</p>
+<h3 id="CSS-specifications"><a href="#CSS-specifications" class="headerlink" title="CSS specifications"></a>CSS specifications</h3><h2 id="본질은-약속이다"><a href="#본질은-약속이다" class="headerlink" title="본질은 약속이다"></a>본질은 약속이다</h2><p>~~ 하면 ~~ 해줘.<br>과거에는 W3c 현재는 HTML재단에서</p>
+<ul>
+<li>CSS LEVEL1<ul>
+<li>A4용지 한장 짜리 분량</li>
+</ul>
+</li>
+<li><p>CSS LEVEL2 + MODULE</p>
+<ul>
+<li>통합레벨, 표현과 내용을 분리하자, CSS의 활성화</li>
+<li>CSS 모듈을 쪼개서 관리할래</li>
+</ul>
+</li>
+<li><p>CSS LEVEL 2.1</p>
+<ul>
+<li>통합레벨이 있다.</li>
+<li>모듈들의 통합이라 거의레벨 3이라고 볼수 있다</li>
+</ul>
+</li>
+<li>Module level<ul>
+<li>레벨은 사라졌다</li>
+<li>모듈이 계속 제안되고 있다.</li>
+<li>새 모듈 태반이 초안이다</li>
+<li>CSS 3 는 존재하지않는다. 2.1에서 튀어나온 것이다.<br>  즉 모듈들이 개별적으로 발전하는 것이다.(너무 많은 모듈들이 중구난방으로 발전)</li>
+</ul>
+</li>
+</ul>
+<h2 id="NORMAL-FLOW"><a href="#NORMAL-FLOW" class="headerlink" title="NORMAL FLOW"></a>NORMAL FLOW</h2><ul>
+<li>공부는 정확한 용어를 정확하게 설명</li>
+<li>왜그런지 말을 못하면 구현도 못한다(스펙 문서가 중요하다)</li>
+</ul>
+<p>-NORMAL FLOW가 핵심이다. 이걸 이해 못하면 HTML을 모른다.</p>
+<p>-POSITION</p>
+<ul>
+<li>static</li>
+<li>relative</li>
+<li>위의 두가지만 노말플로우의 영향을 받음</li>
+<li>Block Formatiing Context, inline Formatting Context, relative Position<ul>
+<li>BFC, IFC, RP</li>
+<li>노말 플로우의 핵심</li>
+<li>BFC가 오프셋의 값을 계산해준다.</li>
+<li>인라인 요소를 만나면 인라인 블락을 만든다</li>
+<li>새로운 BFC를만드는 알고리즘 또한있다</li>
+<li>많은 BFC가 모여서 그려진다.</li>
+<li>word-breaking을 걸어두면 글자하나하나를 span처럼 계산하는 구나</li>
+<li>ifc의 알고리즘을 변경해준다.</li>
+<li>BFC, IFC가 중요하지 돔이 중욯지 않다</li>
+<li>RP<ul>
+<li>static으로 그리고나서 스태틱으로 그려진 위치에서 상대적으로 얼마 줄거냐 라는 것을 나타낸다</li>
+<li>노말 플로를 계산하고 relative를 얼마를 주겠다라는 뜻이다.</li>
+</ul>
+</li>
+<li>Float<ul>
+<li>left, right, none, inherit</li>
+<li>css reset 속성은 속성별로 따로 외워야한다(다양한 모듈 때문에)</li>
+<li>NEW BFC -&gt; Float over Normal flow -&gt; Text, Inline Guard(ifc 요소의 가이드 ifc요소들이 float 요소의 자리에 못들어간다.) -&gt; Linebox(float은 line box의 개념으로 그려지게된다, ifc,bfc nomral flow로 그려지지 않는다.)</li>
+<li>인라인 가드가 플로트 가드에 걸리면 부모의 크기를 확장시키지 않는다. 블락가드에걸리면 부모의 크기를 확장시킨다</li>
+<li>플롯 가드에 걸리면 뒤를 안보고 내려버린다.</li>
+<li>레프트 플롯가드보다 왼쪽 라이트 플롯가드보다 오른쪽에 있어야 한다.</li>
+</ul>
+</li>
+<li>Overflow<ul>
+<li>VISIBLE, HIDDEN, SCROLL, INHERIT, AUTO</li>
+<li>VISIBLE이 아닌 경우에  노말 플로우에 영향을 끼친다.</li>
+<li>다른 걸 쓰면 NEW BFC를 만든다.</li>
+<li>기본 값은 VISIBLE 자동으로 공간이 확장된다.<ul>
+<li>BFC, IFC와 동일한 알고리즘을 가지는 것이라고 볼 수 있다.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>OverFLOW -X, -Y<ul>
+<li>VISIBLE, HIDDEN, SCROLL, CLIP, AUTO</li>
+<li>판단하는 모듈이 다른 css 모듈에 의존해야 한다</li>
+</ul>
+</li>
+<li>TEXT-OVERFLOW<ul>
+<li>2.1 ui module 표준안</li>
+<li>CLIP, ELLIPSIS(…해주게하는거)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>- absolute
+- fixed
+- inherit
+</code></pre></div><div itemscope="" itemprop="author" itemtype="https://schema.org/Person" class="article__author"><img src="/images/avatar.jpg" alt="SangCheol Lee" class="article__author__image"><a title="About SangCheol Lee" rel="author" class="article__author__link">SangCheol Lee</a><p class="article__author__desc"></p><div class="article__author__socials"></div><meta itemprop="name" content="SangCheol Lee"></div><div id="sharer" class="sharer"><div class="sharer-inner"><div class="sharer__right"><button id="sharer-facebook" class="sharer__item"><i class="fa fa-facebook-official"></i></button><button id="sharer-twitter" class="sharer__item"><i class="fa fa-twitter"></i></button><button id="sharer-pinterest" class="sharer__item"><i class="fa fa-pinterest"></i></button><button id="sharer-pocket" class="sharer__item"><i class="fa fa-get-pocket"></i></button></div></div></div><!-- Disqus Code--><div id="disqus_thread"></div><script>(function() {
+  var d = document, s = d.createElement('script');
+  s.src = '//lsctech.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();</script><noscript>Enable JavaScript to see comments.</noscript><!-- Meta Tags for Structured Data--><meta itemprop="dateModified" content="2017-08-31T12:36:58.000Z"><meta itemprop="articleBody" content="영역 나누기(GeoMetry Calculate)
+현대의 렌더링은 geometry를 계산하고 Fragement를 한다
+Geometry를 계산하는 과정을 reflow라 한다
+width ,height, position칠하기(Fragment Fill)
+fragement는 픽셀
+Fragment를 칠하는 과정을 repaint라 한다
+background
+
+현대의..."><meta itemprop="url" content="https://lsc900427.github.io/2017/08/31/css-rendering1/"><meta itemprop="mainEntityOfPage" content="https://lsc900427.github.io/2017/08/31/css-rendering1/"><div itemscope="" itemtype="https://schema.org/Organization" itemprop="publisher"><meta itemprop="name" content="&lt;= 쉽게 읽히는"><div itemscope="" itemprop="logo" itemtype="https://schema.org/ImageObject"><meta itemprop="url" content="https://lsc900427.github.io/images/logo.jpg"></div></div><div itemscope="" itemtype="https://schema.org/ImageObject" itemprop="image"><meta itemprop="contentUrl" content="https://lsc900427.github.io/images/logo.jpg"><meta itemprop="url" content="https://lsc900427.github.io/images/logo.jpg"><meta itemprop="width" content="1280"><meta itemprop="height" content="720"></div></article></div></div><footer id="footer"><div class="widgets"><div class="widgets-inner"><!-- Jade doesn't support dynamic inclusion with `each`.--><!-- So, I just hard coded the file names that will be included.--><div class="widgets__item"><h3 class="widgets__item__heading">Recent posts</h3><ul class="recent-posts"><li class="recent-posts__item"><a href="/2017/10/01/git-02/">git-02</a></li><li class="recent-posts__item"><a href="/2017/09/23/git-01/">git-01</a></li><li class="recent-posts__item"><a href="/2017/09/18/Context/">Context</a></li><li class="recent-posts__item"><a href="/2017/09/14/css-rendering3/">css-rendering3</a></li><li class="recent-posts__item"><a href="/2017/09/07/css-rendersing2/">css-rendersing2</a></li></ul></div><div class="widgets__item"><h3 class="widgets__item__heading">Tags</h3><ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Arrow-function/">Arrow function</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Client-side/">Client-side</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES2015/">ES2015</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ES6/">ES6</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Module/">Module</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Promise/">Promise</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Symbol/">Symbol</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/proto/">__proto__</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bundler/">bundler</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/class/">class</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/const/">const</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/constructor/">constructor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/desturcturing/">desturcturing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/generator/">generator</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git스터디/">git스터디</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/instance/">instance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iteration/">iteration</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterator/">iterator</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/let/">let</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/protocol/">protocol</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rest-parameter/">rest parameter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scope/">scope</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spread/">spread</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/template-literal/">template-literal</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/this/">this</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/v2/">v2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/해체할당/">해체할당</a><span class="tag-list-count">1</span></li></ul></div><div class="widgets__item"><h3 class="widgets__item__heading">Categories</h3></div></div></div><p class="copyright"><small>© 2017 SangCheol Lee<br>Powered by <a href="https://hexo.io" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a>, Theme by <a href="https://github.com/hyunseob" rel="external nofollow noopener noreferrer" target="_blank">HyunSeob</a></small></p></footer><script src="/js/sharer.min.js"></script></body></html>
