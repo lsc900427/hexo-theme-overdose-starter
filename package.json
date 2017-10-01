@@ -1,8 +1,13 @@
 {
   "name": "hexo-theme-overdose-starter",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/npm/npm.git"
+  },
+  "license": "MIT",
   "hexo": {
-    "version": "3.3.8"
+    "version": "3.3.9"
   },
   "dependencies": {
     "hexo": "^3.2.0",

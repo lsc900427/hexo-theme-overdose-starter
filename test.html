@@ -1,37 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style>
+    /*
+    @keyframes ani {
+      from {
+        box-shadow: 0 0 0 30px black, inset 0 0 0 10px red,
+        0 0 0 50px powderblue,
+        inset 0 0 0 20px blue, inset 0 0 0 50px green;
+        margin: 0px;
+        border-radius: 0%;
+      }
+      to {
+        box-shadow: 5px 5px 0 10px rgba(0, 0, 0, 0.3), inset 0 0 0 10px rgba(0, 0, 0, 0.5),
+        15px 15px 0 25px rgba(0, 0, 0, 0.3),
+        inset 0 0 0 20px rgba(0, 0, 0, 0.5);
+        margin: 25px;
+        border-radius: 50%;
+      }
+  </style>
 </head>
-<body>
+<body style="background:#eee; margin: 0; padding: 0;">
+<div style="width:500px;">
+  <div style="border: 20px solid rgba(0, 0, 0, 0.3);  width:100px; height:100px; background:rgba(0, 0, 0, 0.5);
+  display: inline-block; position: relative;
+          box-shadow: 0 0 0 30px black, inset 0 0 0 10px red,
+        0 0 0 50px powderblue,
+        inset 0 0 0 20px blue, inset 0 0 0 50px green;
+        margin: 0px;
+        border-radius: 0%;
+  /*animation: ani 2s linear alternate infinite;*/
+  ">
 
-</body>
+  </div>
+  <div style="padding:5%; border:10px solid blue; width:100px; height:100px; background:green;
+  box-sizing:border-box; display: inline-block; ">
+  </div>
+</div>
+
+
 <script>
-class Parent {
-  constructor(x, y) {
-    this._x = x;
-    this._y = y;
-  }
+  const k = {a: 'hi', b: 'hello', c:'comeon'};
+  let prop = new Map();
+  const NONE = {};
+  const prefix = 'webkit, moz, ms, chrome, o, khtml'.split(',');
+  console.log(prefix)
+  prop.set(k)
+  const getKey = k => {
 
-  toString() {
-    return `${this._x}, ${this._y}`;
-  }
-}
-class Child extends Parent {
-  constructor(x, y, z) {
+    let key = prop.get(k);
+    console.log(key)
+      if(prefix.some(v=> {
+            const newKey = v
+            console.log(newKey)
+    })) alert('hi')
+    }
 
-    super(x, y);
-    this._z = z;
-    console.log(this)
-  }
+    getKey();
 
-  toString() {
-    return `${super.toString()}, ${this._z}`;
-  }
-}
+//  const getkey = k => {
+//    if(!prefix.some(v=> {
+//          const newKey = v + k[0].toUpperCase() + k.substr(1);
+//    if(newKey in s) return prop.set(k, key = newKey);
+//  })) alert('hi')
+//  }
+//
+//  getkey();
 
-const c = new Child(1, 2,3);
-console.log()
 </script>
+</body>
 </html>
