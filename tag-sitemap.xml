@@ -149,13 +149,6 @@
     </url>
 
     <url>
-        <loc>https://lsc900427.github.io/tags/proto/</loc>
-        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://lsc900427.github.io/tags/let/</loc>
         <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -164,6 +157,13 @@
 
     <url>
         <loc>https://lsc900427.github.io/tags/const/</loc>
+        <lastmod>2017-08-06T11:44:12.000Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://lsc900427.github.io/tags/proto/</loc>
         <lastmod>2017-08-06T11:44:12.000Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
