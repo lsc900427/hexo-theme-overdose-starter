@@ -6,7 +6,7 @@
   <link href="/feed.xml" rel="self"/>
   
   <link href="https://lsc900427.github.io/"/>
-  <updated>2017-10-01T03:49:03.000Z</updated>
+  <updated>2017-11-19T07:37:18.451Z</updated>
   <id>https://lsc900427.github.io/</id>
   
   <author>
@@ -17,16 +17,75 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>django_form_validation</title>
+    <link href="https://lsc900427.github.io/2017/11/19/django-form-validation/"/>
+    <id>https://lsc900427.github.io/2017/11/19/django-form-validation/</id>
+    <published>2017-11-19T03:29:15.000Z</published>
+    <updated>2017-11-19T07:37:18.451Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">CommentForm</span><span class="params">(forms.Form)</span>:</span></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">clean_message</span><span class="params">(self)</span>:</span></div><div class="line">        <span class="keyword">return</span> self.cleaned_data.get(<span class="string">'message'</span>, <span class="string">''</span>).strip()</div><div class="line"></div><div class="line">form = CommentForm(request.POST)</div><div class="line"><span class="keyword">if</span> form.is_valid():</div><div class="line">    message = request.POST[<span class="string">'message'</span>]</div><div class="line">    comment = Comment(message =message)</div><div class="line">    comment.save()</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> redirect(post)</div><div class="line">    </div><div class="line">form = CommentForm(request.POST)</div><div class="line"><span class="keyword">if</span> form.is_valid():</div><div class="line">    message = form.cleaned_data[<span class="string">'message'</span>]</div><div class="line">    comment = Comment(message =message)</div><div class="line">    comment.save()</div><div class="line">    </div><div class="line">    <span class="keyword">return</span> redirect(post)</div></pre></td></tr></table></figure><blockquote><ol><li>form.is_valid()를 호출한다</li><li>form.full_clean()을 호출한다.</li><li>필드별 유효성 검사 수행하여 필드별 에러를 체크한다.</li><li>특정 필드.clean()을 통해 Form/Model Field validators 수행한다.</li><li>form.clean_특정필드()</li><li>form.clean() 호출하여 다수 필드에 대한 에러 체크</li><li>에러가 있으면 False 리턴 없었으면 True 리턴</li></ol></blockquote><p>###Form에서 제공하는 2가지 유효성 검사</p><p>1) validator 함수를 통한 유효성 검사</p><pre><code>1. 값이 원하는 조건에 맞지 않을 때2. 리턴 값을 쓰지 않음</code></pre><p>2) Form 클래스 내 clean 멤버함수를 통한 유효성 검사 및 값 변경</p><pre><code>1. 값이 원하는 조건에 맞지 않을 때 예외발생2. 리턴 값을 통해 값 변환</code></pre><h3 id="언제-validators를-쓰고-언제-clean을-쓸까"><a href="#언제-validators를-쓰고-언제-clean을-쓸까" class="headerlink" title="언제 validators를 쓰고, 언제 clean을 쓸까?"></a>언제 validators를 쓰고, 언제 clean을 쓸까?</h3><p>1) validators는 모델에 정의해라, ModelForm을 통해서 validators 정보를 같이 가져올 수 있다.<br>2) clean을 언제 쓰는가</p><pre><code>1. 특정 Form에서 1회성 유효성 검사 루틴이 필요할 때2. 다수 필드 값을 묶어서 유효성 검사가 필요할 때3. 필드 값을 변경할 필요가 있을 때 : validator를 통해서는 값을 변경 할 수 없다. 값의 조건만 체크가능하다.</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/d
+      
+    
+    </summary>
+    
+    
+      <category term="장고" scheme="https://lsc900427.github.io/tags/%EC%9E%A5%EA%B3%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sass</title>
+    <link href="https://lsc900427.github.io/2017/10/28/Sass/"/>
+    <id>https://lsc900427.github.io/2017/10/28/Sass/</id>
+    <published>2017-10-28T01:18:56.000Z</published>
+    <updated>2017-11-19T07:39:40.304Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Sass-기초"><a href="#Sass-기초" class="headerlink" title="Sass 기초"></a>Sass 기초</h1><ul><li>install<ul><li>sudo gem install sass</li><li>sass -v</li></ul></li></ul><ul><li>프로그래밍적 문법으로 css 컴파일 해주는 전처리기</li><li>쓰는 이유<ul><li>구성원들끼리의 규칙(컨벤션)을 통해<br>  효율적인 코드 작성 가능</li></ul></li><li>Sass문법으로 작성된 부분에 대한 css selector의 시각적인 상속관계 파악</li><li>css에서의 변수 및 함수 사용 가능</li><li>웹사이트 용량 방대해짐에 따른 코드의 효율적인 관리가 필요</li><li>기존 문법과의 호환성(제어문 제공 등)<ul><li>if, while</li></ul></li><li>변수 및 함수의 사용으로 인한 효율적인 코드<br> “작성 + 재사용”가능</li></ul><p>   feature -&gt; release -&gt; develop -&gt; master</p><p>   google search -&gt; git flow</p><h2 id="스타일-지정법-4가지"><a href="#스타일-지정법-4가지" class="headerlink" title="스타일 지정법 4가지"></a>스타일 지정법 4가지</h2><ul><li>–sytle nested # 내가 작성한대로</li><li>–style expanded # 일반적인 css작성방식</li><li>–style compact # 1줄로</li><li>–sytle compressed # 컴파일 결과처럼 나오게 된다.</li><li>–sourcemap=none</li></ul><h2 id="변수"><a href="#변수" class="headerlink" title="변수"></a>변수</h2><p>= 대신 : 을 쓴다.</p><h2 id="gulp-node-sass"><a href="#gulp-node-sass" class="headerlink" title="gulp, node-sass"></a>gulp, node-sass</h2><p>npm i gulp -g<br>npm i -D gulp-sass<br>폴더에서 npm i gulp</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Sass-기초&quot;&gt;&lt;a href=&quot;#Sass-기초&quot; class=&quot;headerlink&quot; title=&quot;Sass 기초&quot;&gt;&lt;/a&gt;Sass 기초&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;install&lt;ul&gt;
+&lt;li&gt;sudo gem install sass&lt;/li&gt;
+&lt;
+      
+    
+    </summary>
+    
+    
+      <category term="sass" scheme="https://lsc900427.github.io/tags/sass/"/>
+    
+  </entry>
+  
+  <entry>
     <title>git-02</title>
     <link href="https://lsc900427.github.io/2017/10/01/git-02/"/>
     <id>https://lsc900427.github.io/2017/10/01/git-02/</id>
     <published>2017-10-01T03:49:03.000Z</published>
-    <updated>2017-10-01T03:49:03.000Z</updated>
+    <updated>2017-11-19T08:14:59.748Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="repository-생성방법"><a href="#repository-생성방법" class="headerlink" title="repository 생성방법"></a>repository 생성방법</h3><ul><li><p>웹에서 뉴눌러서 만들기(주로 git init으로 만든다.)</p><ul><li>주소를 복사 하기</li><li>본인이 원하는 경로에 git clone 주소복사본</li><li>폴더가 생기고 접근이 가능하다.</li><li>untracked 상태 (깃 저장소에 한번도 안올라온 상태)</li><li>tracted 상태로 만들기 위해서  add를 해준다.</li><li>이후 staging area에 올라가게 만들어지면 녹색으로 바뀐다.</li><li>git commit+ 메세지입력 + :wq로 하거나 git commit -m “”으로 커밋하면 된다.</li><li>깃은 6개의 해쉬 id를 갖는다. 몇가지가 변했나도 알 수 있다.</li></ul></li><li><p>git init으로 만들기</p></li></ul><h2 id="pull-request"><a href="#pull-request" class="headerlink" title="pull request"></a>pull request</h2><ul><li>pull request에 대한 복잡한 설명이 많기 때문에 간략하게 개념만 작성해보겠다.<ul><li>나 자신의 브런치를 하나 판다.</li><li>base 코드를 pull request를 통해 내가 짠 코드를 관리자에게 컨펌 받을 수 있다.</li><li>코드 관리자가 pull request를 보고 마음에 들면 merge를 하고 마음에 안들면 reject로 다시 짜라고 하면 된다..ㅜㅜ</li><li>오픈소스에도 이런식으로 풀리퀘를 날려서 오픈소스 기여자가 되는 경우가 있다고 하니 한번 시도해봐야겠다.</li></ul></li></ul>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;h3 id=&quot;repository-생성방법&quot;&gt;&lt;a href=&quot;#repository-생성방법&quot; class=&quot;headerlink&quot; title=&quot;repository 생성방법&quot;&gt;&lt;/a&gt;repository 생성방법&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;웹에서 뉴눌러서 
+      
+    
     </summary>
     
+    
+      <category term="pull request, repository" scheme="https://lsc900427.github.io/tags/pull-request-repository/"/>
     
   </entry>
   
@@ -35,9 +94,9 @@
     <link href="https://lsc900427.github.io/2017/09/23/git-01/"/>
     <id>https://lsc900427.github.io/2017/09/23/git-01/</id>
     <published>2017-09-23T01:18:52.000Z</published>
-    <updated>2017-09-23T03:45:25.000Z</updated>
+    <updated>2017-11-19T08:14:59.757Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="버전관리가-무엇인가"><a href="#버전관리가-무엇인가" class="headerlink" title="버전관리가 무엇인가?"></a>버전관리가 무엇인가?</h2><ul><li>파일변화를 시간에 따라 기록했다가 이후에 특정 시점의 버전을 로드할 수 있는시스템</li><li>작업자들의 기록이 한 로그에 기록이 된다</li><li>효율적으로 로그를 관리하고 싶을때 버전관리를 사용한다.</li></ul><h2 id="왜-대세인가-대세의-이유"><a href="#왜-대세인가-대세의-이유" class="headerlink" title="왜 대세인가? 대세의 이유"></a>왜 대세인가? 대세의 이유</h2><ul><li>오픈소스다</li><li>공개 프로젝트는 항상무료다.</li><li>비공개는 돈을 내야한다.</li><li>효율적으로 개발자와 개발자가 소통할 수 있다.</li><li>통째로 저장소에 저장 할 수 있다.<br>  fork란 기능을 통해서 독립된 공간에서 작업을 하고 개선할 수 있다.<br>  그리고 제안도 할 수 있다.(포크를 받아서 복사를 한 후에 Pull request라는 기능을 통해서 제안을 할 수가 있다.<br>  )</li><li>branch를 이용한 local에서의 자유로운 실험이 가능하다.</li><li>변동사항이 없으면 깃은파일을 저장하지 않고<br>이전상태 파일에 대한 링크만 저장한다.</li><li>커밋은 작업자 내용 시간 내용등을 전부 저장한다.</li></ul><ul><li>git –version</li><li>which git</li><li>전역과 지역의 차이</li><li>git config –global user.name <name></name></li><li>글로벌 옵션명령어만 빼면 지역에서 할 수 가 있다.</li><li><p>git init을 한 후에 해야 한다.</p></li><li><p>git init이란??</p></li><li>로컬에서 저장소를 만든다.</li></ul><ul><li>로컬에서 만든 것과 원격으로 만든 것은 다르다.</li><li>로컬에서 저장소를 만들면 내 로컬에서만 만든거지 깃허브 페이지랑 연결된 것이 없다.</li><li>깃랩같은 것은 설치형 저장소(비공개 저장소나 사내용으로 사용하기 위한 기업용으로 많이 쓴다.)</li><li>기업용 깃랩은 무료다. 그러나 깃허브 상업적 사용은 비싸다.</li><li>웹에서 만들 수 도있다. 원격저장소로 만들기.</li><li><p>git init으로 만들기.<br>저장소와 연결을 해줘야하기 때문에 번거롭다</p></li><li><p>On branch master<br>Your branch is based on ‘origin/master’, but the upstream is gone.<br>  (use “git branch –unset-upstream” to fixup)<br>nothing to commit, working tree clean<br>unmodified</p><ul><li>수정되면 unmodified가 된다<br>ㅡ 언트랙드</li><li><p>statge area에 올려야한다 깃은!!!</p></li><li><p>깃의 명령어</p></li><li>git status를 치는 습관이 필요하다 파일이 어떤 상태인지 꼭 알아야함</li><li>현재저상소의 변동이 있는지 없는지 확인할 수 있는 명령어다.</li><li><p>축약해서도 볼수 있다.. git status -s</p></li><li><p>staging area 있는 이유</p><ul><li>내가 원하는 것만 커밋을 하고 싶을때 staging area를 통해서 !</li><li>개발 스테이징 개발 베포 리얼배포</li><li>충돌을 해결하고 싶을 때 </li></ul></li></ul></li><li><p>master, 해시로그, 7글자 메세지</p></li><li>커밋생성 로그 이거고 메세지는 이거다.</li><li>4개의 파일변한거 확인가능 create mode 신규로 추가되었다.</li><li>깃이 돌아가는 과정을 상세히 볼 수 가 있다. </li></ul><p>[master 0d76dc0] hello<br> 4 files changed, 188 insertions(+)<br> create mode 100644 2.html<br> create mode 100644 3.html<br> create mode 100644 4.html<br> create mode 100644 5.html</p><p> git commit 이후에 메세지 위에 메세지를 입력해서 킬수도 있다.</p><ul><li>유의미한 커밋메시지를 작성하도록 해라.</li><li>커밋을 하면 로그가 생긴다.</li><li>로그관리를 어떻게 하는지 알아야한다.</li><li>로그보는 것은 중요하다.</li><li>git log</li><li>git log –oneline<ul><li>해시를 7글자로 줄여주고 커밋메세지만 보여준다.</li><li>만약 END가 나오면 Q로 빠져나온다.</li></ul></li></ul><ul><li>git log –graph -2</li></ul><p>iTerm2</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="버전관리가-무엇인가"><a href="#버전관리가-무엇인가" class="headerlink" title="버전관리가 무엇인가?"></a>버전관리가 무엇인가?</h2><ul><li>파일변화를 시간에 따라 기록했다가 이후에 특정 시점의 버전을 로드할 수 있는시스템</li><li>작업자들의 기록이 한 로그에 기록이 된다</li><li>효율적으로 로그를 관리하고 싶을때 버전관리를 사용한다.</li></ul><h2 id="왜-대세인가-대세의-이유"><a href="#왜-대세인가-대세의-이유" class="headerlink" title="왜 대세인가? 대세의 이유"></a>왜 대세인가? 대세의 이유</h2><ul><li>오픈소스다</li><li>공개 프로젝트는 항상무료다.</li><li>비공개는 돈을 내야한다.</li><li>효율적으로 개발자와 개발자가 소통할 수 있다.</li><li>통째로 저장소에 저장 할 수 있다.<br>  fork란 기능을 통해서 독립된 공간에서 작업을 하고 개선할 수 있다.<br>  그리고 제안도 할 수 있다.(포크를 받아서 복사를 한 후에 Pull request라는 기능을 통해서 제안을 할 수가 있다.<br>  )</li><li>branch를 이용한 local에서의 자유로운 실험이 가능하다.</li><li>변동사항이 없으면 깃은파일을 저장하지 않고<br>이전상태 파일에 대한 링크만 저장한다.</li><li>커밋은 작업자 내용 시간 내용등을 전부 저장한다.</li></ul><ul><li>git –version</li><li>which git</li><li>전역과 지역의 차이</li><li>git config –global user.name <name></name></li><li>글로벌 옵션명령어만 빼면 지역에서 할 수 가 있다.</li><li><p>git init을 한 후에 해야 한다.</p></li><li><p>git init이란??</p></li><li>로컬에서 저장소를 만든다.</li></ul><ul><li>로컬에서 만든 것과 원격으로 만든 것은 다르다.</li><li>로컬에서 저장소를 만들면 내 로컬에서만 만든거지 깃허브 페이지랑 연결된 것이 없다.</li><li>깃랩같은 것은 설치형 저장소(비공개 저장소나 사내용으로 사용하기 위한 기업용으로 많이 쓴다.)</li><li>기업용 깃랩은 무료다. 그러나 깃허브 상업적 사용은 비싸다.</li><li>웹에서 만들 수 도있다. 원격저장소로 만들기.</li><li><p>git init으로 만들기.<br>저장소와 ㅠ연결을 해줘야하기 때문에 번거롭다</p></li><li><p>On branch master<br>Your branch is based on ‘origin/master’, but the upstream is gone.<br>  (use “git branch –unset-upstream” to fixup)<br>nothing to commit, working tree clean<br>unmodified</p><ul><li>수정되면 unmodified가 된다<br>ㅡ 언트랙드</li><li><p>statge area에 올려야한다 깃은!!!</p></li><li><p>깃의 명령어</p></li><li>git status를 치는 습관이 필요하다 파일이 어떤 상태인지 꼭 알아야함</li><li>현재저상소의 변동이 있는지 없는지 확인할 수 있는 명령어다.</li><li><p>축약해서도 볼수 있다.. git status -s</p></li><li><p>staging area 있는 이유</p><ul><li>내가 원하는 것만 커밋을 하고 싶을때 staging area를 통해서 !</li><li>개발 스테이징 개발 베포 리얼배포</li><li>충돌을 해결하고 싶을 때 </li></ul></li></ul></li><li><p>master, 해시로그, 7글자 메세지</p></li><li>커밋생성 로그 이거고 메세지는 이거다.</li><li>4개의 파일변한거 확인가능 create mode 신규로 추가되었다.</li><li>깃이 돌아가는 과정을 상세히 볼 수 가 있다. </li></ul><p>[master 0d76dc0] hello<br> 4 files changed, 188 insertions(+)<br> create mode 100644 2.html<br> create mode 100644 3.html<br> create mode 100644 4.html<br> create mode 100644 5.html</p><p> git commit 이후에 메세지 위에 메세지를 입력해서 킬수도 있다.</p><ul><li>유의미한 커밋메시지를 작성하도록 해라.</li><li>커밋을 하면 로그가 생긴다.</li><li>로그관리를 어떻게 하는지 알아야한다.</li><li>로그보는 것은 중요하다.</li><li>git log</li><li>git log –oneline<ul><li>해시를 7글자로 줄여주고 커밋메세지만 보여준다.</li><li>만약 END가 나오면 Q로 빠져나온다.</li></ul></li></ul><ul><li>git log –graph -2</li></ul><h3 id="git-reset"><a href="#git-reset" class="headerlink" title="git reset"></a>git reset</h3><ul><li>push은 관계없다. 리셋은 로컬에서만 동작한다.</li><li><p>파일이 유지된 상태로 돌아갔다.</p><ul><li>mixed: staging된 상태로 돌아가는 것이다.</li><li>soft: 믹스드와 반대로 스테이징 된 상태로 돌아간 것이다. 돌아간 다음에 바로 커밋이 가능하다.(거의안 쓴다)</li><li>hard: 파일을 유지하지 않고 다 날려버 당시의 헤드로그 상태로 돌아간다</li><li><p>HEAD이용 : git reset HEAD^ : 바로이전의 로그로</p><ul><li>HEAD~3 : 3번째 전의 로그로 돌아가기</li></ul></li><li><p>af897b8 (HEAD -&gt; master, origin/master) sixth</p><ul><li>전자는 로컬 후자는 리모트</li></ul></li><li>깃은 로컬이 원본이 아니라 원본 저장소가 원본이라고 생각한다.<br>  그렇기에 그냥 올리면 안된다 로컬이 바뀌면 원본이 그대로기 때문에<br>  7번에서 푸쉬를 강제로하면 커밋로그가 사라져버린다.</li><li>git push origin master –force : 강제로 로컬에서 변한 헤드로그를 푸쉬해버린다. 이전 커밋은 전부 지워진다.</li><li>row git 깃 텍스트 파일을 볼 수 있게 해주는 파일</li><li>깃 리셋을 앞으로 돌리고 싶은경우 <ul><li>홈페이지의 깃로그를 가져와서 하기</li><li>git fetch, pull</li></ul></li><li>git fetch: 원격저장소의 변경내역을 반영하고 로컬에 위치한데이터와 병합은안합<ul><li>누군가가 푸쉬를 했는데 나는 작업하고있어 근데 남의 것을 받아와야하긴 하는데 나의 산출물에는 전혀 영향을 미치면 안된다.</li><li>이것을 써야할 경우가 가끔 있다.</li><li>내 커밋을 올렸는데 각자 4명의 작업자들이 푸쉬를 할 경우 그 사람들이 같은 파일을 수정했다고 생각한다면<br>협업자는 같은 파일에 같은 곳에서 작업을 할 수 도 있다. 그럴경우 fetch를 받아오면<br>로그가 변경되었다고 나온다. 그러나 내작업물에는 변화가 없다. </li></ul></li><li>fetch 마무리 : </li><li><p>git pull : 남이 한걸 내 로컬에 받아오고 내 산출물도 리모트저장소껄로 바꿔버린다.</p><pre><code>즉 pull은 fetch + merge라고 보면 된다.</code></pre><p>  pull을 받을 때 로컬에 커밋이먼저되어야 그래야 풀이된다.</p><ul><li>충돌나는 상황 :<br>remote: Counting objects: 3, done.<br>remote: Compressing objects: 100% (1/1), done.<br>remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0<br>Unpacking objects: 100% (3/3), done.<br>From <a href="https://github.com/JaesunPark/171014" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/JaesunPark/171014</a><ul><li>branch            master     -&gt; FETCH_HEAD<br>aa0fcc0..08ffbbe  master     -&gt; origin/master<br>Auto-merging 123.html<br>CONFLICT (content): Merge conflict in 123.html<br>Automatic merge failed; fix conflicts and then commit the result.</li></ul></li><li><p>꺽새 등으로 표현이 생긴다. 그러면 그 꺽새들을 전부 지워주면 충돌이 해결된다.<br>HEAD기준으로 충돌해결하기</p></li><li><p>both modified:   123.html<br>충돌을 해결했다. 이후 애드 커밋해주</p></li><li><p>내로컬에서 커밋한 상태에서 풀받은경우 :<br>머지커밋이라고 하는데 풀받으면 편집창이 뜨게된다.<br>뜨는게 싫으면 로컬에서 커밋안한상태에서 풀을 받으면되고<br>이런 메시지 뜨면 커밋하고 풀받으면 된다.<br>즉 풀받는 경우<br>로컬에서 커밋한상태와 안한 상태는다르다.</p></li></ul></li></ul></li></ul>]]></content>
     
     <summary type="html">
     
@@ -50,7 +109,7 @@
     </summary>
     
     
-      <category term="git스터디" scheme="https://lsc900427.github.io/tags/git%EC%8A%A4%ED%84%B0%EB%94%94/"/>
+      <category term="git, 버전관리, git 명령어" scheme="https://lsc900427.github.io/tags/git-%EB%B2%84%EC%A0%84%EA%B4%80%EB%A6%AC-git-%EB%AA%85%EB%A0%B9%EC%96%B4/"/>
     
   </entry>
   
@@ -324,62 +383,6 @@
   </entry>
   
   <entry>
-    <title>ES6 템플릿 리터럴</title>
-    <link href="https://lsc900427.github.io/2017/08/06/template_literal/"/>
-    <id>https://lsc900427.github.io/2017/08/06/template_literal/</id>
-    <published>2017-08-06T11:44:12.000Z</published>
-    <updated>2017-08-06T11:44:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="../../../../images/es6.png" alt="html"><br>ES6는 템플릿 리터럴이라 불리는 새로운 문자열 표기법을 도입했다.<br>공백을 표현하기 위해서는 이스케이프 시퀀스를 사용해야한다.</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> strings =</div><div class="line"><span class="string">`&lt;li&gt;밥&lt;/li&gt;</span></div><div class="line"><span class="string">&lt;li&gt;반찬&lt;/li&gt;</span></div><div class="line"><span class="string">&lt;li&gt;고기&lt;/li&gt;`</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(strings)</div></pre></td></tr></table></figure><p>문자열 삽입, 표현식에 새로운 방식을 도입했다.<br><code>${문자열}</code>, <code>${자바스크립트 표현}</code><br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> first = <span class="string">'이'</span>;</div><div class="line"><span class="keyword">const</span> last = <span class="string">'지'</span>;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="string">'정말'</span> + first + last);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">`정말<span class="subst">$&#123;first&#125;</span><span class="subst">$&#123;last&#125;</span>`</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="string">`<span class="subst">$&#123;first === <span class="string">'이'</span>&#125;</span>`</span>)</div></pre></td></tr></table></figure></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;../../../../images/es6.png&quot; alt=&quot;html&quot;&gt;&lt;br&gt;ES6는 템플릿 리터럴이라 불리는 새로운 문자열 표기법을 도입했다.&lt;br&gt;공백을 표현하기 위해서는 이스케이프 시퀀스를 사용해야한다.&lt;/p&gt;
-&lt;figur
-      
-    
-    </summary>
-    
-    
-      <category term="ES6" scheme="https://lsc900427.github.io/tags/ES6/"/>
-    
-      <category term="ES2015" scheme="https://lsc900427.github.io/tags/ES2015/"/>
-    
-      <category term="template-literal" scheme="https://lsc900427.github.io/tags/template-literal/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ES6-destructuring</title>
-    <link href="https://lsc900427.github.io/2017/08/06/ES6-destructuring/"/>
-    <id>https://lsc900427.github.io/2017/08/06/ES6-destructuring/</id>
-    <published>2017-08-06T11:44:12.000Z</published>
-    <updated>2017-08-06T11:44:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="../../../../images/es6.png" alt="html"></p><p>해체할당(destructuring)은 기존에 구조로 가지고 있던 객체(배열 또는 객체)를 분석하여 개별적인 변수에 할당하는 것<br>배열 또는 객체 리터럴에서 필요한 값만 추출하여 변수에 할당하거나 반환할때 유용</p><h2 id="배열-해체할당"><a href="#배열-해체할당" class="headerlink" title="배열 해체할당"></a>배열 해체할당</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>];</div><div class="line"></div><div class="line"><span class="keyword">var</span> one = arr[<span class="number">0</span>];</div><div class="line"><span class="keyword">var</span> two = arr[<span class="number">1</span>];</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(one, two)</div></pre></td></tr></table></figure><p>ES6에서 배열해체할당은 배열의 각 요소를 배열로부터 추출하여 변수 리스트에 할당한다.<br>이때 추출, 할당 기준은 인덱스이다.</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//인덱스를 기준으로 배열로부터 요소를 추출하여 변수에 할당한다.</span></div><div class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>];</div><div class="line"><span class="keyword">const</span> [hi, hello] = arr;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(hi, hello); <span class="comment">//1, 2</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> q, w, e;</div><div class="line"></div><div class="line">[q, w] = [<span class="number">1</span>, <span class="number">2</span>];</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(q, w); <span class="comment">// 1, 2</span></div><div class="line"></div><div class="line">[q, w] = [<span class="number">1</span>]; <span class="comment">// 1, undefined</span></div><div class="line"></div><div class="line">[q, w, e = <span class="number">5</span>] = [<span class="number">1</span>, <span class="number">2</span>];</div><div class="line"><span class="built_in">console</span>.log(q, w, e) <span class="comment">// 1, 2, 5</span></div><div class="line"></div><div class="line">[q, ...w] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</div><div class="line"><span class="built_in">console</span>.log(q, w) <span class="comment">// 1, [2,3,4,5]</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</div><div class="line"><span class="keyword">const</span> [a, , b] = arr  <span class="comment">//1, 3 공백이 처리가 안되었다.</span></div></pre></td></tr></table></figure><h2 id="객체-해체할당"><a href="#객체-해체할당" class="headerlink" title="객체 해체할당"></a>객체 해체할당</h2><p>ES5의 경우 배열과 같다.</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ob = &#123;<span class="attr">first</span>: <span class="string">'sang'</span>, <span class="attr">last</span>: <span class="string">'lee'</span>&#125;;</div><div class="line"><span class="keyword">var</span> name = &#123;&#125;;</div><div class="line"></div><div class="line">name.first = ob.first;</div><div class="line">name.last = ob.last;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(name) <span class="comment">// &#123;first: 'sang', last: 'lee'&#125;</span></div></pre></td></tr></table></figure><p>배열의 해체할당 기준은 index 객체 해체할당의 기준은 key값이다.</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> ob = &#123;<span class="attr">first</span>: <span class="string">'s'</span>, <span class="attr">last</span>: <span class="string">'l'</span>&#125;;</div><div class="line"><span class="keyword">const</span> &#123;first, last&#125; = ob;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(first, last); <span class="comment">// s, l</span></div></pre></td></tr></table></figure><p>객체 해체할당을 위해서는 <code>=</code> 왼쪽에 객체형태의 변수가 필요하다.</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> &#123;<span class="attr">prop1</span>: item1, <span class="attr">prop2</span>: item2&#125; = &#123;<span class="attr">prop1</span>: <span class="number">1</span>, <span class="attr">prop2</span>: <span class="number">2</span>&#125;;</div><div class="line"><span class="built_in">console</span>.log(&#123;<span class="attr">prop1</span>: item1, <span class="attr">prop2</span>: item2&#125;); <span class="comment">// &#123;prop1: 1, prop2: 2&#125;</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">padding</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">const</span> left = <span class="number">1</span>, right = <span class="number">2</span>, top = <span class="number">3</span>, bottom = <span class="number">4</span>;</div><div class="line">  <span class="keyword">return</span> &#123;left, right, top, bottom&#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> &#123;left, bottom&#125; = padding();</div><div class="line"><span class="built_in">console</span>.log(left, bottom); <span class="comment">// 1, 4</span></div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;../../../../images/es6.png&quot; alt=&quot;html&quot;&gt;&lt;/p&gt;
-&lt;p&gt;해체할당(destructuring)은 기존에 구조로 가지고 있던 객체(배열 또는 객체)를 분석하여 개별적인 변수에 할당하는 것&lt;br&gt;배열 또는 
-      
-    
-    </summary>
-    
-    
-      <category term="ES6" scheme="https://lsc900427.github.io/tags/ES6/"/>
-    
-      <category term="desturcturing" scheme="https://lsc900427.github.io/tags/desturcturing/"/>
-    
-      <category term="해체할당" scheme="https://lsc900427.github.io/tags/%ED%95%B4%EC%B2%B4%ED%95%A0%EB%8B%B9/"/>
-    
-  </entry>
-  
-  <entry>
     <title>__proto__</title>
     <link href="https://lsc900427.github.io/2017/08/06/proto/"/>
     <id>https://lsc900427.github.io/2017/08/06/proto/</id>
@@ -401,32 +404,6 @@
       <category term="ES6" scheme="https://lsc900427.github.io/tags/ES6/"/>
     
       <category term="__proto__" scheme="https://lsc900427.github.io/tags/proto/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Es6 let,const</title>
-    <link href="https://lsc900427.github.io/2017/08/06/let-const/"/>
-    <id>https://lsc900427.github.io/2017/08/06/let-const/</id>
-    <published>2017-08-06T11:44:12.000Z</published>
-    <updated>2017-08-06T11:44:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="../../../../images/es6.png" alt="html"></p><h2 id="ES5에서-변수-선언의-유일한-방법-gt-var-키워드"><a href="#ES5에서-변수-선언의-유일한-방법-gt-var-키워드" class="headerlink" title="ES5에서 변수 선언의 유일한 방법 =&gt; var 키워드"></a>ES5에서 변수 선언의 유일한 방법 =&gt; var 키워드</h2><p><code>var 키워드의 특징</code></p><p>Function-level scope</p><ul><li>전역 변수의 남용 문제</li><li>for문에서 사용한 변수의 전역 참조 문제<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//1</span></div><div class="line">&#123;</div><div class="line"> <span class="keyword">var</span> a = <span class="number">2</span>; </div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//2</span></div></pre></td></tr></table></figure></li></ul><p>var 키워드 생략 가능</p><ul><li>의도하지 않은 변수의 전역화</li></ul><p>변수 호이스팅</p><ul><li>인터프리터가 변수를 읽기 전에 undefined값이 할당되는 문제 발생</li></ul><p>전역변수가 사용이 편리한 면이 있지만 scope가 넓어서 협업시 변수의 중복 문제 및 재할당문제가 발생 될 수 있다.<br>Es6는 이런 단점을 보완하기 위해서 let, const 키워드를 도입</p><h2 id="ES6에서의-변수-let"><a href="#ES6에서의-변수-let" class="headerlink" title="ES6에서의 변수 let"></a>ES6에서의 변수 let</h2><p><code>let의 특징</code></p><p>Block-level scope</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//1</span></div><div class="line">&#123;</div><div class="line"> <span class="keyword">let</span> a = <span class="number">2</span>; </div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//1</span></div></pre></td></tr></table></figure><p>중복 선언 금지<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">5</span>;</div><div class="line"><span class="keyword">var</span> a = <span class="number">8</span>; <span class="comment">// 가능</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> b = <span class="number">10</span>;</div><div class="line"><span class="keyword">let</span> b = <span class="number">12</span>; <span class="comment">// 오류발생</span></div></pre></td></tr></table></figure></p><p>호이스팅</p><ul><li>자바스크립트는 let, const 포함 모든 선언을 호이스팅한다. var와 let의 차이점은<br>선언문 전에 참조할 경우 undefined가 아닌 Error가 발생한다. TDZ(일시적 사각지대) 때문이다.</li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> c = <span class="number">1</span>; <span class="comment">//의미없</span></div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">// undefined</span></div><div class="line"><span class="keyword">var</span> a;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">// ReferneceError</span></div><div class="line"><span class="keyword">let</span> bar;</div></pre></td></tr></table></figure><p>이 차이점은 어디서 올까?<br>var로 선언한다면 변수를 선언하고 선언한 변수를 메모리에 넣는<br>초기화 행위(이때 undefined)가 한번에 이뤄진다. 일단 초기화를 하고 변수를 읽는다고 보면 된다.<br>let은 변수가 선언은 되지만 메모리에 넣는 행위(초기화)가<br>변수를 읽는 시점에 이뤄지기 때문에 에러가 발생한다.<br>즉 ReferenceError가 발생하는 이유는 초기화(undefined 할당)가 되지 않고<br>변수만 선언한 시점에서 변수를 불러오기 때문에 에러가 뜨는 것이라고 볼 수 있다.<br>에러가 뜨는 변수등록부터 초기화 될 때까지를 TDZ라 부른다.</p><p>전역변수</p><ul><li>var는 단순하게 전역에 변수를 때려넣으면 전역 객체의 프로퍼티가 되지만<br>let같은 경우는 전역 변수로 사용해도 전역 객체의 프로퍼티가 아니다.</li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">consolelog(<span class="built_in">window</span>.a); <span class="comment">//1</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> b = <span class="number">2</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.b); <span class="comment">//undefined</span></div></pre></td></tr></table></figure><p><code>const키워드의 특징</code><br>const는 변하지 않는 값(상수)의 역할을 수행한다.<br>const를 객체의 선언에 사용하면 좋다.</p><p>선언과 초기화</p><ul><li>let은 초기화 이후 다른 값으로 재할당 가능하나 const는 초기화 이후 재할당이 불가능하다.</li><li>또한 선언만 할수 없다.<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> a = <span class="number">1</span>;</div><div class="line">a = <span class="number">2</span>; <span class="comment">// Error</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> c; <span class="comment">//Error</span></div></pre></td></tr></table></figure></li></ul><p>의미있는 변수는 상수화하자(대문자)<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (a &gt; <span class="number">1</span>) &#123;</div><div class="line">  </div><div class="line">&#125; <span class="comment">// 지양</span></div><div class="line"><span class="keyword">const</span> MIN_NUMBER = <span class="number">1</span>;</div><div class="line"><span class="keyword">if</span> (a &gt; MIN_NUMBER) &#123;</div><div class="line">  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h2 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론</h2><p>const는 객체타입에 사용하자<br>let은 primirive형 변수에 사용하자<br>ES6는 var를 사용하지말자.</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;img src=&quot;../../../../images/es6.png&quot; alt=&quot;html&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;ES5에서-변수-선언의-유일한-방법-gt-var-키워드&quot;&gt;&lt;a href=&quot;#ES5에서-변수-선언의-유일한-방법-gt-var-키워드&quot; c
-      
-    
-    </summary>
-    
-    
-      <category term="let" scheme="https://lsc900427.github.io/tags/let/"/>
-    
-      <category term="const" scheme="https://lsc900427.github.io/tags/const/"/>
     
   </entry>
   
@@ -455,6 +432,32 @@
       <category term="rest parameter" scheme="https://lsc900427.github.io/tags/rest-parameter/"/>
     
       <category term="spread" scheme="https://lsc900427.github.io/tags/spread/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Es6 let,const</title>
+    <link href="https://lsc900427.github.io/2017/08/06/let-const/"/>
+    <id>https://lsc900427.github.io/2017/08/06/let-const/</id>
+    <published>2017-08-06T11:44:12.000Z</published>
+    <updated>2017-08-06T11:44:12.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="../../../../images/es6.png" alt="html"></p><h2 id="ES5에서-변수-선언의-유일한-방법-gt-var-키워드"><a href="#ES5에서-변수-선언의-유일한-방법-gt-var-키워드" class="headerlink" title="ES5에서 변수 선언의 유일한 방법 =&gt; var 키워드"></a>ES5에서 변수 선언의 유일한 방법 =&gt; var 키워드</h2><p><code>var 키워드의 특징</code></p><p>Function-level scope</p><ul><li>전역 변수의 남용 문제</li><li>for문에서 사용한 변수의 전역 참조 문제<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//1</span></div><div class="line">&#123;</div><div class="line"> <span class="keyword">var</span> a = <span class="number">2</span>; </div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//2</span></div></pre></td></tr></table></figure></li></ul><p>var 키워드 생략 가능</p><ul><li>의도하지 않은 변수의 전역화</li></ul><p>변수 호이스팅</p><ul><li>인터프리터가 변수를 읽기 전에 undefined값이 할당되는 문제 발생</li></ul><p>전역변수가 사용이 편리한 면이 있지만 scope가 넓어서 협업시 변수의 중복 문제 및 재할당문제가 발생 될 수 있다.<br>Es6는 이런 단점을 보완하기 위해서 let, const 키워드를 도입</p><h2 id="ES6에서의-변수-let"><a href="#ES6에서의-변수-let" class="headerlink" title="ES6에서의 변수 let"></a>ES6에서의 변수 let</h2><p><code>let의 특징</code></p><p>Block-level scope</p><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> a = <span class="number">1</span>;</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//1</span></div><div class="line">&#123;</div><div class="line"> <span class="keyword">let</span> a = <span class="number">2</span>; </div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">//1</span></div></pre></td></tr></table></figure><p>중복 선언 금지<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">5</span>;</div><div class="line"><span class="keyword">var</span> a = <span class="number">8</span>; <span class="comment">// 가능</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> b = <span class="number">10</span>;</div><div class="line"><span class="keyword">let</span> b = <span class="number">12</span>; <span class="comment">// 오류발생</span></div></pre></td></tr></table></figure></p><p>호이스팅</p><ul><li>자바스크립트는 let, const 포함 모든 선언을 호이스팅한다. var와 let의 차이점은<br>선언문 전에 참조할 경우 undefined가 아닌 Error가 발생한다. TDZ(일시적 사각지대) 때문이다.</li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> c = <span class="number">1</span>; <span class="comment">//의미없</span></div><div class="line"><span class="built_in">console</span>.log(a); <span class="comment">// undefined</span></div><div class="line"><span class="keyword">var</span> a;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(b); <span class="comment">// ReferneceError</span></div><div class="line"><span class="keyword">let</span> bar;</div></pre></td></tr></table></figure><p>이 차이점은 어디서 올까?<br>var로 선언한다면 변수를 선언하고 선언한 변수를 메모리에 넣는<br>초기화 행위(이때 undefined)가 한번에 이뤄진다. 일단 초기화를 하고 변수를 읽는다고 보면 된다.<br>let은 변수가 선언은 되지만 메모리에 넣는 행위(초기화)가<br>변수를 읽는 시점에 이뤄지기 때문에 에러가 발생한다.<br>즉 ReferenceError가 발생하는 이유는 초기화(undefined 할당)가 되지 않고<br>변수만 선언한 시점에서 변수를 불러오기 때문에 에러가 뜨는 것이라고 볼 수 있다.<br>에러가 뜨는 변수등록부터 초기화 될 때까지를 TDZ라 부른다.</p><p>전역변수</p><ul><li>var는 단순하게 전역에 변수를 때려넣으면 전역 객체의 프로퍼티가 되지만<br>let같은 경우는 전역 변수로 사용해도 전역 객체의 프로퍼티가 아니다.</li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</div><div class="line">consolelog(<span class="built_in">window</span>.a); <span class="comment">//1</span></div><div class="line"></div><div class="line"><span class="keyword">let</span> b = <span class="number">2</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.b); <span class="comment">//undefined</span></div></pre></td></tr></table></figure><p><code>const키워드의 특징</code><br>const는 변하지 않는 값(상수)의 역할을 수행한다.<br>const를 객체의 선언에 사용하면 좋다.</p><p>선언과 초기화</p><ul><li>let은 초기화 이후 다른 값으로 재할당 가능하나 const는 초기화 이후 재할당이 불가능하다.</li><li>또한 선언만 할수 없다.<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> a = <span class="number">1</span>;</div><div class="line">a = <span class="number">2</span>; <span class="comment">// Error</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> c; <span class="comment">//Error</span></div></pre></td></tr></table></figure></li></ul><p>의미있는 변수는 상수화하자(대문자)<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (a &gt; <span class="number">1</span>) &#123;</div><div class="line">  </div><div class="line">&#125; <span class="comment">// 지양</span></div><div class="line"><span class="keyword">const</span> MIN_NUMBER = <span class="number">1</span>;</div><div class="line"><span class="keyword">if</span> (a &gt; MIN_NUMBER) &#123;</div><div class="line">  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p><h2 id="결론"><a href="#결론" class="headerlink" title="결론"></a>결론</h2><p>const는 객체타입에 사용하자<br>let은 primirive형 변수에 사용하자<br>ES6는 var를 사용하지말자.</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;../../../../images/es6.png&quot; alt=&quot;html&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;ES5에서-변수-선언의-유일한-방법-gt-var-키워드&quot;&gt;&lt;a href=&quot;#ES5에서-변수-선언의-유일한-방법-gt-var-키워드&quot; c
+      
+    
+    </summary>
+    
+    
+      <category term="let" scheme="https://lsc900427.github.io/tags/let/"/>
+    
+      <category term="const" scheme="https://lsc900427.github.io/tags/const/"/>
     
   </entry>
   
