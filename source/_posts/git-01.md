@@ -1,7 +1,7 @@
 ---
 title: git-01
 date: 2017-09-23 10:18:52
-tags: git스터디
+tags: git, 버전관리, git 명령어
 ---
 
 ## 버전관리가 무엇인가?
@@ -44,7 +44,7 @@ tags: git스터디
 - 기업용 깃랩은 무료다. 그러나 깃허브 상업적 사용은 비싸다.
 - 웹에서 만들 수 도있다. 원격저장소로 만들기.
 - git init으로 만들기.
-저장소와 연결을 해줘야하기 때문에 번거롭다
+저장소와 ㅠ연결을 해줘야하기 때문에 번거롭다
 
 - On branch master
   Your branch is based on 'origin/master', but the upstream is gone.
@@ -90,8 +90,57 @@ tags: git스터디
         
 - git log --graph -2
 
+### git reset
+- push은 관계없다. 리셋은 로컬에서만 동작한다.
+- 파일이 유지된 상태로 돌아갔다.
+    - mixed: staging된 상태로 돌아가는 것이다.
+    - soft: 믹스드와 반대로 스테이징 된 상태로 돌아간 것이다. 돌아간 다음에 바로 커밋이 가능하다.(거의안 쓴다)
+    - hard: 파일을 유지하지 않고 다 날려버 당시의 헤드로그 상태로 돌아간다
+    - HEAD이용 : git reset HEAD^ : 바로이전의 로그로
+        - HEAD~3 : 3번째 전의 로그로 돌아가기
+    
+    - af897b8 (HEAD -> master, origin/master) sixth
+        - 전자는 로컬 후자는 리모트
+    - 깃은 로컬이 원본이 아니라 원본 저장소가 원본이라고 생각한다.
+        그렇기에 그냥 올리면 안된다 로컬이 바뀌면 원본이 그대로기 때문에
+        7번에서 푸쉬를 강제로하면 커밋로그가 사라져버린다.
+    - git push origin master --force : 강제로 로컬에서 변한 헤드로그를 푸쉬해버린다. 이전 커밋은 전부 지워진다.
+    - row git 깃 텍스트 파일을 볼 수 있게 해주는 파일
+    - 깃 리셋을 앞으로 돌리고 싶은경우 
+        - 홈페이지의 깃로그를 가져와서 하기
+        - git fetch, pull
+    - git fetch: 원격저장소의 변경내역을 반영하고 로컬에 위치한데이터와 병합은안합
+        - 누군가가 푸쉬를 했는데 나는 작업하고있어 근데 남의 것을 받아와야하긴 하는데 나의 산출물에는 전혀 영향을 미치면 안된다.
+        - 이것을 써야할 경우가 가끔 있다.
+        - 내 커밋을 올렸는데 각자 4명의 작업자들이 푸쉬를 할 경우 그 사람들이 같은 파일을 수정했다고 생각한다면
+        협업자는 같은 파일에 같은 곳에서 작업을 할 수 도 있다. 그럴경우 fetch를 받아오면
+        로그가 변경되었다고 나온다. 그러나 내작업물에는 변화가 없다. 
+    - fetch 마무리 : 
+    - git pull : 남이 한걸 내 로컬에 받아오고 내 산출물도 리모트저장소껄로 바꿔버린다.
+                즉 pull은 fetch + merge라고 보면 된다.
+        pull을 받을 때 로컬에 커밋이먼저되어야 그래야 풀이된다.
+        - 충돌나는 상황 : 
+        remote: Counting objects: 3, done.
+        remote: Compressing objects: 100% (1/1), done.
+        remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0
+        Unpacking objects: 100% (3/3), done.
+        From https://github.com/JaesunPark/171014
+         * branch            master     -> FETCH_HEAD
+           aa0fcc0..08ffbbe  master     -> origin/master
+        Auto-merging 123.html
+        CONFLICT (content): Merge conflict in 123.html
+        Automatic merge failed; fix conflicts and then commit the result.
+        - 꺽새 등으로 표현이 생긴다. 그러면 그 꺽새들을 전부 지워주면 충돌이 해결된다.
+        HEAD기준으로 충돌해결하기
+        
+        - both modified:   123.html 
+        충돌을 해결했다. 이후 애드 커밋해주
+        
+        - 내로컬에서 커밋한 상태에서 풀받은경우 :
+        머지커밋이라고 하는데 풀받으면 편집창이 뜨게된다.
+        뜨는게 싫으면 로컬에서 커밋안한상태에서 풀을 받으면되고
+        이런 메시지 뜨면 커밋하고 풀받으면 된다.
+        즉 풀받는 경우
+        로컬에서 커밋한상태와 안한 상태는다르다.
 
-
-
-iTerm2
 
