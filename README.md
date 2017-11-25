@@ -5,4 +5,3 @@
 3. 차근차근 발전
 
 
-perfectacle.github.io를 통해 블로그 생성
